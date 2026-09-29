@@ -1,174 +1,230 @@
+/* =========================
+   DASAR
+   ========================= */
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
     background: #f5f5f5;
-    color: #222;
+    margin: 0;
+    color: #222222;
     font-family: Arial, sans-serif;
 }
 
 #kotak {
     width: 90%;
     max-width: 1200px;
-    min-height: 100vh;
-    margin: auto;
     background: white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    margin: auto;
+    min-height: 100vh;
 }
 
-/* HEADER */
 
-header {
-    padding: 30px 20px;
+/* =========================
+   HEADER
+   ========================= */
+
+.header {
+    background: #111111;
+    color: #D4AF37;
+    padding: 30px;
     text-align: center;
-    background: linear-gradient(135deg, #ff4b00, #ff8a00);
-    color: white;
 }
 
-header h1 {
+.header h1 {
     margin: 0;
-    font-size: 34px;
+    font-size: 36px;
 }
 
-header p {
-    margin: 8px 0 0;
+.header p {
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
 }
 
-/* NAVIGASI */
+
+/* =========================
+   NAVIGASI
+   ========================= */
 
 .navi {
-    background: #111;
-}
-
-.navi ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.navi li {
-    margin: 0;
+    text-align: center;
+    background: #D4AF37;
+    padding: 15px;
 }
 
 .navi a {
-    display: block;
-    padding: 15px 20px;
-    color: white;
+    color: #111111;
     text-decoration: none;
     font-weight: bold;
+    margin: 0 15px;
+    font-size: 17px;
     transition: 0.3s;
 }
 
 .navi a:hover {
-    background: #ff5a00;
+    color: white;
 }
 
-/* ISI */
 
-main {
+/* =========================
+   CONTENT
+   ========================= */
+
+.content {
+    text-align: center;
     padding: 30px;
 }
 
-main h2 {
-    color: #ff4b00;
+.content img {
+    width: 300px;
+    max-width: 90%;
+    height: auto;
 }
 
-main p {
-    line-height: 1.7;
+.content h2 {
+    font-size: 28px;
+    color: #111111;
+    margin-top: 25px;
 }
 
-/* KEUNGGULAN */
+.content h3 {
+    margin-top: 30px;
+}
+
+.content p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   KEUNGGULAN
+   ========================= */
 
 .keunggulan {
-    margin: 25px 0;
-    padding: 20px;
-    background: #fff7f2;
-    border-left: 5px solid #ff5a00;
-    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
 }
 
-.keunggulan h3 {
-    margin-top: 0;
-    color: #ff4b00;
+.keunggulan p {
+    background: #f5f5f5;
+    padding: 12px;
+    margin: 8px 0;
+    border-left: 5px solid #D4AF37;
+    border-radius: 5px;
 }
 
-/* KOMENTAR */
+
+/* =========================
+   TOMBOL
+   ========================= */
+
+button {
+    background-color: #111111;
+    text-align: center;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #D4AF37;
+    color: #111111;
+}
+
+
+/* =========================
+   KOMENTAR
+   ========================= */
 
 .komentar {
-    width: 90%;
-    max-width: 700px;
+    width: 600px;
+    max-width: 90%;
     margin: 40px auto;
     padding: 25px;
-    background: white;
-    border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    border: 1px solid #eee;
+    background: #f5f5f5;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 .komentar h3 {
-    margin: 0 0 22px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #111111;
     text-align: center;
-    font-size: 25px;
-    color: #111;
+    font-size: 24px;
 }
+
+
+/* INPUT */
 
 .komentar input {
     width: 100%;
-    padding: 14px 16px;
-    margin-bottom: 14px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background: #fafafa;
+    padding: 13px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
     font-size: 15px;
     outline: none;
 }
 
+
+/* TEXTAREA */
+
 .komentar textarea {
     width: 100%;
-    min-height: 130px;
-    padding: 14px 16px;
-    margin-bottom: 14px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background: #fafafa;
+    height: 110px;
+    padding: 13px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
     font-family: Arial, sans-serif;
     font-size: 15px;
     resize: vertical;
     outline: none;
 }
 
+
+/* FOCUS */
+
 .komentar input:focus,
 .komentar textarea:focus {
-    background: white;
-    border-color: #ff5a00;
-    box-shadow: 0 0 0 3px rgba(255, 90, 0, 0.12);
+    border-color: #D4AF37;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.4);
 }
 
-/* TOMBOL */
+
+/* TOMBOL KOMENTAR */
 
 .komentar button {
     width: 100%;
-    padding: 14px;
-    border: none;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #ff4b00, #ff8a00);
+    background: #111111;
     color: white;
-    font-size: 16px;
-    font-weight: bold;
+    border: none;
+    padding: 13px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
+    font-weight: bold;
+    font-size: 15px;
 }
 
 .komentar button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 7px 18px rgba(255, 90, 0, 0.3);
+    background: #D4AF37;
+    color: #111111;
 }
+
 
 /* DAFTAR KOMENTAR */
 
@@ -176,99 +232,104 @@ main p {
     margin-top: 25px;
 }
 
+
+/* KARTU KOMENTAR */
+
 .komentar-item {
-    margin-bottom: 15px;
-    padding: 18px;
-    background: #fff7f2;
-    border-left: 5px solid #ff5a00;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-left: 5px solid #D4AF37;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
 }
+
+
+/* NAMA */
 
 .komentar-item strong {
     display: block;
-    margin-bottom: 8px;
-    color: #ff4b00;
+    margin-bottom: 6px;
+    color: #111111;
     font-size: 16px;
 }
 
+
+/* ISI */
+
 .komentar-item p {
     margin: 0 0 8px;
-    color: #333;
-    line-height: 1.6;
-    word-break: break-word;
+    color: #333333;
+    line-height: 1.5;
+    font-size: 15px;
 }
 
+
+/* TANGGAL */
+
 .komentar-item small {
-    color: #777;
+    color: #888888;
     font-size: 12px;
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+   ========================= */
 
 .footer {
-    margin-top: 40px;
-    padding: 20px;
-    background: #111;
+    background: #111111;
     color: white;
     text-align: center;
+    padding: 15px;
 }
 
 .footer p {
     margin: 0;
 }
 
-/* HP */
 
-@media (max-width: 768px) {
+/* =========================
+   HP
+   ========================= */
+
+@media (max-width: 700px) {
 
     #kotak {
         width: 96%;
     }
 
-    header h1 {
-        font-size: 27px;
+    .header h1 {
+        font-size: 28px;
     }
 
     .navi a {
-        padding: 12px 14px;
+        display: inline-block;
+        margin: 5px 8px;
         font-size: 14px;
     }
 
-    main {
+    .content {
         padding: 20px;
     }
 
     .komentar {
-        width: 100%;
-        padding: 20px;
+        width: 95%;
     }
+
 }
 
-@media (max-width: 480px) {
 
-    header {
-        padding: 25px 15px;
-    }
-
-    header h1 {
-        font-size: 23px;
-    }
-
-    .navi ul {
-        flex-direction: column;
-    }
+@media (max-width: 450px) {
 
     .navi a {
-        text-align: center;
-        border-bottom: 1px solid #333;
+        display: block;
+        margin: 0;
+        padding: 10px;
     }
 
-    main {
-        padding: 15px;
+    .header h1 {
+        font-size: 24px;
     }
 
-    .komentar h3 {
-        font-size: 21px;
-    }
 }
