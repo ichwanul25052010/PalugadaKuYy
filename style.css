@@ -333,3 +333,22 @@ button:hover {
     }
 
 }
+/* =========================
+   TOMBOL HAPUS KOMENTAR
+   ========================= */
+
+.hapus-komentar {
+    width: auto !important;
+    background: #111111 !important;
+    color: white !important;
+    padding: 8px 15px !important;
+    margin: 5px 0 0 !important;
+    border-radius: 6px !important;
+    font-size: 13px !important;
+    cursor: pointer;
+}
+
+.hapus-komentar:hover {
+    background: #D4AF37 !important;
+    color: #111111 !important;
+}
