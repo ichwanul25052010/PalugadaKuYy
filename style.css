@@ -1,7 +1,3 @@
-/* =========================================
-   DASAR WEBSITE PALUGADAKUYY
-   ========================================= */
-
 * {
     box-sizing: border-box;
 }
@@ -10,11 +6,10 @@ body {
     margin: 0;
     padding: 0;
     background: #f5f5f5;
-    color: #222222;
+    color: #222;
     font-family: Arial, sans-serif;
 }
 
-/* Kotak utama website */
 #kotak {
     width: 90%;
     max-width: 1200px;
@@ -24,9 +19,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
 }
 
-/* =========================================
-   HEADER
-   ========================================= */
+/* HEADER */
 
 header {
     padding: 30px 20px;
@@ -38,21 +31,16 @@ header {
 header h1 {
     margin: 0;
     font-size: 34px;
-    letter-spacing: 1px;
 }
 
 header p {
     margin: 8px 0 0;
-    font-size: 15px;
 }
 
-/* =========================================
-   NAVIGASI
-   ========================================= */
+/* NAVIGASI */
 
 .navi {
-    background: #111111;
-    padding: 0;
+    background: #111;
 }
 
 .navi ul {
@@ -81,9 +69,7 @@ header p {
     background: #ff5a00;
 }
 
-/* =========================================
-   ISI WEBSITE
-   ========================================= */
+/* ISI */
 
 main {
     padding: 30px;
@@ -97,9 +83,7 @@ main p {
     line-height: 1.7;
 }
 
-/* =========================================
-   KEUNGGULAN
-   ========================================= */
+/* KEUNGGULAN */
 
 .keunggulan {
     margin: 25px 0;
@@ -114,58 +98,51 @@ main p {
     color: #ff4b00;
 }
 
-/* =========================================
-   KOMENTAR PENGUNJUNG
-   ========================================= */
+/* KOMENTAR */
 
 .komentar {
     width: 90%;
     max-width: 700px;
     margin: 40px auto;
     padding: 25px;
-    background: #ffffff;
+    background: white;
     border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
-    border: 1px solid #eeeeee;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
 }
 
 .komentar h3 {
     margin: 0 0 22px;
     text-align: center;
     font-size: 25px;
-    color: #111111;
+    color: #111;
 }
 
-/* Input nama */
 .komentar input {
     width: 100%;
     padding: 14px 16px;
     margin-bottom: 14px;
-    border: 1px solid #dddddd;
+    border: 1px solid #ddd;
     border-radius: 10px;
     background: #fafafa;
     font-size: 15px;
     outline: none;
-    transition: 0.3s;
 }
 
-/* Textarea komentar */
 .komentar textarea {
     width: 100%;
     min-height: 130px;
     padding: 14px 16px;
     margin-bottom: 14px;
-    border: 1px solid #dddddd;
+    border: 1px solid #ddd;
     border-radius: 10px;
     background: #fafafa;
     font-family: Arial, sans-serif;
     font-size: 15px;
     resize: vertical;
     outline: none;
-    transition: 0.3s;
 }
 
-/* Efek ketika kolom diklik */
 .komentar input:focus,
 .komentar textarea:focus {
     background: white;
@@ -173,9 +150,7 @@ main p {
     box-shadow: 0 0 0 3px rgba(255, 90, 0, 0.12);
 }
 
-/* =========================================
-   TOMBOL KIRIM KOMENTAR
-   ========================================= */
+/* TOMBOL */
 
 .komentar button {
     width: 100%;
@@ -192,22 +167,15 @@ main p {
 
 .komentar button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 7px 18px rgba(255, 90, 0, 0.30);
+    box-shadow: 0 7px 18px rgba(255, 90, 0, 0.3);
 }
 
-.komentar button:active {
-    transform: translateY(0);
-}
-
-/* =========================================
-   DAFTAR KOMENTAR
-   ========================================= */
+/* DAFTAR KOMENTAR */
 
 #daftarKomentar {
     margin-top: 25px;
 }
 
-/* Kartu komentar */
 .komentar-item {
     margin-bottom: 15px;
     padding: 18px;
@@ -217,7 +185,6 @@ main p {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
-/* Nama pengunjung */
 .komentar-item strong {
     display: block;
     margin-bottom: 8px;
@@ -225,22 +192,24 @@ main p {
     font-size: 16px;
 }
 
-/* Isi komentar */
 .komentar-item p {
-    margin: 0;
-    color: #333333;
+    margin: 0 0 8px;
+    color: #333;
     line-height: 1.6;
     word-break: break-word;
 }
 
-/* =========================================
-   FOOTER
-   ========================================= */
+.komentar-item small {
+    color: #777;
+    font-size: 12px;
+}
+
+/* FOOTER */
 
 .footer {
     margin-top: 40px;
     padding: 20px;
-    background: #111111;
+    background: #111;
     color: white;
     text-align: center;
 }
@@ -249,9 +218,7 @@ main p {
     margin: 0;
 }
 
-/* =========================================
-   RESPONSIVE / HP
-   ========================================= */
+/* HP */
 
 @media (max-width: 768px) {
 
@@ -294,7 +261,7 @@ main p {
 
     .navi a {
         text-align: center;
-        border-bottom: 1px solid #333333;
+        border-bottom: 1px solid #333;
     }
 
     main {
