@@ -1,371 +1,62 @@
-/* ================= RESET ================= */
+/* ================= COMMENT SECTION ================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, sans-serif;
+#komentar {
     background: #fff8f5;
-    color: #222;
-    line-height: 1.6;
 }
 
-
-/* ================= NAVBAR ================= */
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: #b51212;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+.komentar-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: start;
 }
 
-nav {
-    max-width: 1100px;
-    margin: auto;
-    padding: 15px 20px;
+.komentar-form,
+.komentar-list {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.08);
 }
 
-.logo {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.logo span {
-    color: #ff8c00;
-}
-
-.menu {
-    display: flex;
-    gap: 25px;
-    list-style: none;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.menu a:hover {
-    color: #ff9d00;
-}
-
-
-/* ================= SECTION UMUM ================= */
-
-section {
-    padding: 80px 20px;
-}
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-}
-
-.judul {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.judul h2 {
-    font-size: 35px;
+.komentar-form h3,
+.komentar-list h3 {
     color: #b51212;
-    margin-bottom: 10px;
-}
-
-.judul p {
-    color: #666;
-}
-
-
-/* ================= HOME ================= */
-
-#home {
-    min-height: 90vh;
-
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    background: linear-gradient(
-        rgba(181, 18, 18, 0.9),
-        rgba(255, 100, 0, 0.85)
-    );
-
-    color: white;
-}
-
-.home-content {
-    max-width: 800px;
-    margin: auto;
-}
-
-.home-content h1 {
-    font-size: 55px;
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
-.home-content h1 span {
-    color: #ffd000;
-}
-
-.home-content p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 13px 25px;
-
-    background: white;
-    color: #b51212;
-
-    text-decoration: none;
-    border-radius: 8px;
-
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #ffd000;
-    transform: translateY(-3px);
-}
-
-
-/* ================= TENTANG ================= */
-
-.tentang-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.tentang-box h3 {
-    color: #b51212;
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.tentang-box p {
-    margin-bottom: 15px;
-}
-
-.tentang-card {
-    background: linear-gradient(
-        135deg,
-        #b51212,
-        #ff7000
-    );
-
-    color: white;
-    padding: 40px;
-    border-radius: 20px;
-
-    text-align: center;
-}
-
-.tentang-card h3 {
-    color: white;
-}
-
-
-/* ================= PRODUK ================= */
-
-#produk {
-    background: #fff0ea;
-}
-
-.produk-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.produk-card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-
-    box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.1);
-
-    transition: 0.3s;
-}
-
-.produk-card:hover {
-    transform: translateY(-7px);
-}
-
-.produk-card .icon {
-    font-size: 45px;
-    margin-bottom: 15px;
-}
-
-.produk-card h3 {
-    color: #b51212;
-    margin-bottom: 10px;
-}
-
-.harga {
-    color: #ff6500;
-    font-size: 22px;
-    font-weight: bold;
-    margin: 15px 0;
-}
-
-.produk-btn {
-    display: inline-block;
-
-    background: #b51212;
-    color: white;
-
-    padding: 10px 18px;
-
-    border-radius: 7px;
-    text-decoration: none;
-}
-
-.produk-btn:hover {
-    background: #ff6500;
-}
-
-
-/* ================= KEUNGGULAN ================= */
-
-.keunggulan-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.keunggulan-card {
-    text-align: center;
-
-    padding: 25px;
-
-    background: white;
-    border-radius: 15px;
-
-    box-shadow:
-        0 3px 15px rgba(0, 0, 0, 0.08);
-}
-
-.keunggulan-card .icon {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.keunggulan-card h3 {
-    color: #b51212;
-    margin-bottom: 8px;
-}
-
-
-/* ================= TESTIMONI ================= */
-
-#testimoni {
-    background: #fff0ea;
-}
-
-.testimoni-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.testimoni-card {
-    background: white;
-
-    padding: 25px;
-
-    border-radius: 15px;
-
-    box-shadow:
-        0 3px 15px rgba(0, 0, 0, 0.08);
-}
-
-.bintang {
-    color: #ff9d00;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.testimoni-card h3 {
-    color: #b51212;
-    margin-top: 15px;
-}
-
-
-/* ================= KONTAK ================= */
-
-.kontak-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-.kontak-info h3 {
-    color: #b51212;
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.kontak-info p {
-    margin-bottom: 12px;
-}
-
-form {
-    background: white;
-
-    padding: 30px;
-
-    border-radius: 15px;
-
-    box-shadow:
-        0 3px 15px rgba(0, 0, 0, 0.1);
-}
-
-input,
-textarea {
+.komentar-form input,
+.komentar-form select,
+.komentar-form textarea {
     width: 100%;
-
     padding: 13px;
 
     margin-bottom: 15px;
 
     border: 1px solid #ddd;
-    border-radius: 7px;
+    border-radius: 8px;
 
     font-size: 15px;
 }
 
-textarea {
+.komentar-form select {
+    background: white;
+}
+
+.komentar-form textarea {
     height: 130px;
     resize: vertical;
 }
 
-button {
+.komentar-form button {
     width: 100%;
-
     padding: 13px;
 
     border: none;
-    border-radius: 7px;
+    border-radius: 8px;
 
     background: #b51212;
     color: white;
@@ -376,74 +67,67 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.komentar-form button:hover {
     background: #ff6500;
 }
 
 
-/* ================= FOOTER ================= */
+/* ================= COMMENT CARD ================= */
 
-footer {
-    background: #8f0d0d;
+.comment-card {
+    padding: 18px;
+    margin-bottom: 15px;
 
-    color: white;
+    border-left: 5px solid #ff6500;
+    border-radius: 10px;
 
+    background: #fff8f5;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 8px;
+}
+
+.comment-header strong {
+    color: #b51212;
+}
+
+.rating {
+    font-size: 14px;
+}
+
+.comment-text {
+    margin: 8px 0;
+
+    color: #444;
+
+    word-wrap: break-word;
+}
+
+.comment-card small {
+    color: #888;
+    font-size: 12px;
+}
+
+.belum-ada {
+    color: #888;
     text-align: center;
-
-    padding: 25px 20px;
-}
-
-footer span {
-    color: #ff9d00;
-    font-weight: bold;
+    padding: 30px 10px;
 }
 
 
-/* ================= RESPONSIVE ================= */
+/* ================= RESPONSIVE COMMENT ================= */
 
 @media (max-width: 800px) {
 
-    .menu {
-        gap: 10px;
-    }
-
-    .menu a {
-        font-size: 13px;
-    }
-
-    .home-content h1 {
-        font-size: 40px;
-    }
-
-    .tentang-box,
-    .kontak-container {
+    .komentar-layout {
         grid-template-columns: 1fr;
     }
 
-    .produk-container,
-    .testimoni-container {
-        grid-template-columns: 1fr;
-    }
-
-    .keunggulan-container {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-
-@media (max-width: 500px) {
-
-    nav {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .menu {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .keunggulan-container {
-        grid-template-columns: 1fr;
-    }
 }
