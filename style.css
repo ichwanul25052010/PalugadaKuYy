@@ -1,0 +1,31 @@
+body {background: #f5f5f5; margin: 0; color: #222222; font-family: Arial, sans-serif;}
+#kotak {width:90%; background:white; margin: auto; min-height:100vh;}
+.header {background:#111111; color:#D4AF37; padding:30px; text-align:center;}
+.header h1 {margin: O; font-size:36px;
+.header p {color:white; font-size:18px; margin-top: 10px;}
+.logo {width:200px; height:100px; background:#FFFFFF; float:left;}
+.content {text-align:center; padding: 30px;}
+.content img {width:300px; height: auto; max-width:90%;}
+.content h2 {font-size:28px; color:#111111; margin-top: 25px;}
+.content p {font-size:17px; line-height:1,6;}
+/* DAFTAR KEUNGGULAN */
+keunggulan {max-width: 600px; margin: 20px auto; text-align: left;}
+.keunggulan p {background: #f5f5f5; padding: 12px; margin: 8px 0; border-left: 5px solid #D4AF37;}
+.navi {text-align:center; height:50px; background:#D4AF37; padding-top:15px; box-sizing:border-box;}
+.navi a {color:#111111; text-decoration:none; font-weight:bold; margin:O 20px; font-size:17px;}
+navi a:hover {color:white;}
+.footer {background:#111111; color:white; text-align:center; padding:15px;}
+/*tombol*/
+button {background-color:##111111; text-align: center; color:white; border:none; padding;15px 20px; margin:5px; border-radius:8px; cursor:pointer; font-weight:bold; cursor:pointer;}
+button:hover {background:#D4AF37;}
+/* KOMENTAR */
+.komentar {width: 600px; max-width: 90%; margin: 30px auto; padding: 20px; background: #f5f5f5; border-radius: 10px; box-sizing: border-box;}
+.komentar h3 {margin-top: 0; color: #111111;}
+.komentar input,
+.komentar textarea {width: 100%; padding: 12px; margin-bottom: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 6px; font-family: Arial, sans-serif;}
+.komentar textarea {height: 100px; resize: vertical;}
+.komentar button {background: #111111; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;}
+.komentar button:hover {background: #D4AF37;}
+#daftarkomentar { margin-top: 20px;}
+.komentar-item {background: white; padding: 12px; margin-bottom: 10px; border-left: 5px solid #D4AF37; border-radius: 5px;}
+.komentar-item strong { display: block; margin-bottom: 5px;}
