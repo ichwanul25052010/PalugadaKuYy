@@ -1,542 +1,307 @@
-/* =========================
-   RESET
-========================= */
+/* =========================================
+   DASAR WEBSITE PALUGADAKUYY
+   ========================================= */
+
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
-    color: #333;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #222222;
+    font-family: Arial, sans-serif;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.container {
+/* Kotak utama website */
+#kotak {
     width: 90%;
     max-width: 1200px;
+    min-height: 100vh;
     margin: auto;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
 }
 
+/* =========================================
+   HEADER
+   ========================================= */
 
-/* =========================
-   NAVBAR
-========================= */
 header {
-    background: #b51212;
+    padding: 30px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ff4b00, #ff8a00);
     color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
-.navbar {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    min-height: 70px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+header h1 {
+    margin: 0;
+    font-size: 34px;
+    letter-spacing: 1px;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+header p {
+    margin: 8px 0 0;
+    font-size: 15px;
 }
 
-.nav-links {
-    display: flex;
+/* =========================================
+   NAVIGASI
+   ========================================= */
+
+.navi {
+    background: #111111;
+    padding: 0;
+}
+
+.navi ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
-    gap: 25px;
-}
-
-.nav-links a {
-    color: white;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #ffd000;
-}
-
-
-/* =========================
-   HOME
-========================= */
-#home {
-    min-height: 90vh;
-    background: linear-gradient(
-        135deg,
-        #b51212,
-        #ff6500
-    );
-
-    color: white;
-
     display: flex;
-    align-items: center;
-    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.hero {
-    width: 100%;
-}
-
-.hero h1 {
-    font-size: 55px;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 13px 28px;
-    background: white;
-    color: #b51212;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #ffd000;
-    color: #222;
-}
-
-
-/* =========================
-   SEMUA SECTION
-========================= */
-section {
-    padding: 80px 0;
-}
-
-.judul {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.judul h2 {
-    color: #b51212;
-    font-size: 35px;
-    margin-bottom: 10px;
-}
-
-.judul p {
-    color: #666;
-}
-
-
-/* =========================
-   TENTANG
-========================= */
-#tentang {
-    background: #fff;
-}
-
-.about-box {
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
-}
-
-.about-box p {
-    font-size: 17px;
-    color: #555;
-}
-
-
-/* =========================
-   PRODUK
-========================= */
-#produk {
-    background: #fff5f0;
-}
-
-.product-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.product-card {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-
-    transition: 0.3s;
-}
-
-.product-card:hover {
-    transform: translateY(-8px);
-}
-
-.product-card img {
-    width: 100%;
-    max-height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.product-card h3 {
-    color: #b51212;
-    margin-bottom: 10px;
-}
-
-.product-card p {
-    color: #666;
-    margin-bottom: 15px;
-}
-
-.harga {
-    color: #ff6500;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-
-/* =========================
-   KEUNGGULAN
-========================= */
-#keunggulan {
-    background: white;
-}
-
-.advantages {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.advantage-box {
-    text-align: center;
-    padding: 30px;
-    background: #fff5f0;
-    border-radius: 15px;
-    border-bottom: 4px solid #ff6500;
-}
-
-.advantage-box h3 {
-    color: #b51212;
-    margin-bottom: 10px;
-}
-
-.advantage-box p {
-    color: #666;
-}
-
-
-/* =========================
-   COMMENT SECTION
-========================= */
-#komentar {
-    background: #fff0ea;
-}
-
-.comment-form-box {
-    max-width: 700px;
-    margin: 0 auto 40px;
-    padding: 30px;
-
-    background: white;
-    border-radius: 15px;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.comment-form-box h3 {
-    color: #b51212;
-    margin-bottom: 20px;
-}
-
-.comment-form-box input,
-.comment-form-box textarea {
-    width: 100%;
-    padding: 14px;
-    margin-bottom: 15px;
-
-    border: 1px solid #ddd;
-    border-radius: 8px;
-
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.comment-form-box input:focus,
-.comment-form-box textarea:focus {
-    outline: none;
-    border-color: #ff6500;
-}
-
-.comment-form-box textarea {
-    height: 120px;
-    resize: vertical;
-}
-
-.comment-form-box button {
-    width: 100%;
-    padding: 14px;
-
-    border: none;
-    border-radius: 8px;
-
-    background: #b51212;
-    color: white;
-
-    font-size: 16px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.comment-form-box button:hover {
-    background: #ff6500;
-}
-
-
-/* =========================
-   DAFTAR KOMENTAR
-========================= */
-.comment-section {
-    max-width: 900px;
-    margin: auto;
-    padding: 30px;
-
-    background: white;
-    border-radius: 15px;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.comment-section > h3 {
-    color: #b51212;
-    font-size: 25px;
-
-    margin-bottom: 25px;
-
-    border-bottom: 2px solid #ff6500;
-    padding-bottom: 12px;
-}
-
-.comment-item {
-    padding: 20px;
-    margin-bottom: 15px;
-
-    background: #fff8f5;
-
-    border-left: 5px solid #ff6500;
-    border-radius: 10px;
-}
-
-.comment-item:last-child {
-    margin-bottom: 0;
-}
-
-.comment-name {
-    color: #b51212;
-    font-size: 18px;
-    font-weight: bold;
-
-    margin-bottom: 5px;
-}
-
-.comment-date {
-    color: #888;
-    font-size: 12px;
-
-    margin-bottom: 10px;
-}
-
-.comment-content {
-    color: #333;
-    font-size: 15px;
-
-    word-wrap: break-word;
-}
-
-#komentarKosong {
-    text-align: center;
-    color: #888;
-    padding: 30px;
-}
-
-
-/* =========================
-   KONTAK
-========================= */
-#kontak {
-    background: white;
-}
-
-.contact-box {
-    max-width: 700px;
-    margin: auto;
-    text-align: center;
-
-    padding: 35px;
-
-    background: #fff5f0;
-    border-radius: 15px;
-}
-
-.contact-box h3 {
-    color: #b51212;
-    margin-bottom: 15px;
-}
-
-.contact-box p {
-    margin-bottom: 10px;
-    color: #555;
-}
-
-
-/* =========================
-   TESTIMONI
-========================= */
-#testimoni {
-    background: #fff5f0;
-}
-
-.testimonial-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.testimonial-card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-}
-
-.testimonial-card h3 {
-    color: #b51212;
-    margin-bottom: 10px;
-}
-
-.testimonial-card p {
-    color: #666;
-    font-style: italic;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 25px;
-}
-
-footer p {
+.navi li {
     margin: 0;
 }
 
+.navi a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-/* =========================
-   RESPONSIVE TABLET
-========================= */
-@media (max-width: 900px) {
+.navi a:hover {
+    background: #ff5a00;
+}
 
-    .nav-links {
-        gap: 12px;
+/* =========================================
+   ISI WEBSITE
+   ========================================= */
+
+main {
+    padding: 30px;
+}
+
+main h2 {
+    color: #ff4b00;
+}
+
+main p {
+    line-height: 1.7;
+}
+
+/* =========================================
+   KEUNGGULAN
+   ========================================= */
+
+.keunggulan {
+    margin: 25px 0;
+    padding: 20px;
+    background: #fff7f2;
+    border-left: 5px solid #ff5a00;
+    border-radius: 10px;
+}
+
+.keunggulan h3 {
+    margin-top: 0;
+    color: #ff4b00;
+}
+
+/* =========================================
+   KOMENTAR PENGUNJUNG
+   ========================================= */
+
+.komentar {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+    border: 1px solid #eeeeee;
+}
+
+.komentar h3 {
+    margin: 0 0 22px;
+    text-align: center;
+    font-size: 25px;
+    color: #111111;
+}
+
+/* Input nama */
+.komentar input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    background: #fafafa;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Textarea komentar */
+.komentar textarea {
+    width: 100%;
+    min-height: 130px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    background: #fafafa;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    resize: vertical;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Efek ketika kolom diklik */
+.komentar input:focus,
+.komentar textarea:focus {
+    background: white;
+    border-color: #ff5a00;
+    box-shadow: 0 0 0 3px rgba(255, 90, 0, 0.12);
+}
+
+/* =========================================
+   TOMBOL KIRIM KOMENTAR
+   ========================================= */
+
+.komentar button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff4b00, #ff8a00);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.komentar button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(255, 90, 0, 0.30);
+}
+
+.komentar button:active {
+    transform: translateY(0);
+}
+
+/* =========================================
+   DAFTAR KOMENTAR
+   ========================================= */
+
+#daftarKomentar {
+    margin-top: 25px;
+}
+
+/* Kartu komentar */
+.komentar-item {
+    margin-bottom: 15px;
+    padding: 18px;
+    background: #fff7f2;
+    border-left: 5px solid #ff5a00;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Nama pengunjung */
+.komentar-item strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #ff4b00;
+    font-size: 16px;
+}
+
+/* Isi komentar */
+.komentar-item p {
+    margin: 0;
+    color: #333333;
+    line-height: 1.6;
+    word-break: break-word;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    background: #111111;
+    color: white;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* =========================================
+   RESPONSIVE / HP
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    #kotak {
+        width: 96%;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    .navi a {
+        padding: 12px 14px;
         font-size: 14px;
     }
 
-    .hero h1 {
-        font-size: 42px;
-    }
-
-    .product-container,
-    .advantages,
-    .testimonial-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-/* =========================
-   RESPONSIVE HP
-========================= */
-@media (max-width: 600px) {
-
-    .navbar {
-        flex-direction: column;
-        padding: 15px 0;
-    }
-
-    .logo {
-        margin-bottom: 10px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        font-size: 13px;
-    }
-
-    #home {
-        min-height: 80vh;
-    }
-
-    .hero h1 {
-        font-size: 35px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    section {
-        padding: 60px 0;
-    }
-
-    .judul h2 {
-        font-size: 28px;
-    }
-
-    .product-container,
-    .advantages,
-    .testimonial-container {
-        grid-template-columns: 1fr;
-    }
-
-    .comment-form-box,
-    .comment-section {
+    main {
         padding: 20px;
     }
 
-    .comment-section > h3 {
+    .komentar {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .navi ul {
+        flex-direction: column;
+    }
+
+    .navi a {
+        text-align: center;
+        border-bottom: 1px solid #333333;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .komentar h3 {
         font-size: 21px;
     }
 }
