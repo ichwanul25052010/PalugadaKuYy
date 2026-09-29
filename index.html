@@ -2,87 +2,452 @@
 <html lang="id">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Palugada KuYy</title>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+
+        /* =========================
+           DASAR WEBSITE
+           ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            color: #222222;
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* =========================
+           KOTAK UTAMA
+           ========================= */
+
+        #kotak {
+            width: 90%;
+            max-width: 1200px;
+            min-height: 100vh;
+            margin: auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.08);
+        }
+
+
+        /* =========================
+           HEADER
+           ========================= */
+
+        .header {
+            background: linear-gradient(135deg, #ff4b00, #ff8a00);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .header p {
+            margin: 10px 0 0;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           NAVIGASI
+           ========================= */
+
+        .navi {
+            background: #111111;
+            text-align: center;
+        }
+
+        .navi a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 16px 18px;
+            transition: 0.3s;
+        }
+
+        .navi a:hover {
+            background: #ff5a00;
+        }
+
+
+        /* =========================
+           CONTENT
+           ========================= */
+
+        .content {
+            padding: 35px;
+            text-align: center;
+        }
+
+        .content h2 {
+            color: #ff4b00;
+            margin-top: 10px;
+        }
+
+        .content h3 {
+            margin-top: 30px;
+        }
+
+        .content p {
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           KEUNGGULAN
+           ========================= */
+
+        .keunggulan {
+            max-width: 650px;
+            margin: 25px auto;
+            text-align: left;
+        }
+
+        .keunggulan p {
+            background: #fff7f2;
+            padding: 14px;
+            margin: 10px 0;
+            border-left: 5px solid #ff5a00;
+            border-radius: 8px;
+        }
+
+
+        /* =========================
+           KOMENTAR
+           ========================= */
+
+        .komentar {
+            width: 90%;
+            max-width: 700px;
+            margin: 45px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 18px;
+            border: 1px solid #eeeeee;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+            text-align: left;
+        }
+
+        .komentar h3 {
+            margin: 0 0 20px;
+            text-align: center;
+            font-size: 25px;
+            color: #111111;
+        }
+
+
+        /* INPUT NAMA */
+
+        .komentar input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 12px;
+            border: 1px solid #dddddd;
+            border-radius: 10px;
+            font-size: 15px;
+            outline: none;
+        }
+
+
+        /* TEXTAREA */
+
+        .komentar textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 14px;
+            margin-bottom: 12px;
+            border: 1px solid #dddddd;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            resize: vertical;
+            outline: none;
+        }
+
+
+        .komentar input:focus,
+        .komentar textarea:focus {
+            border-color: #ff5a00;
+            box-shadow: 0 0 0 3px rgba(255,90,0,0.12);
+        }
+
+
+        /* TOMBOL */
+
+        .komentar button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #ff4b00, #ff8a00);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .komentar button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 18px rgba(255,90,0,0.30);
+        }
+
+
+        /* DAFTAR KOMENTAR */
+
+        #daftarKomentar {
+            margin-top: 25px;
+        }
+
+
+        /* KARTU KOMENTAR */
+
+        .komentar-item {
+            background: #fff7f2;
+            padding: 17px;
+            margin-bottom: 15px;
+            border-left: 5px solid #ff5a00;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+
+        .komentar-item strong {
+            display: block;
+            margin-bottom: 7px;
+            color: #ff4b00;
+            font-size: 16px;
+        }
+
+
+        .komentar-item p {
+            margin: 0 0 7px;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+
+        .komentar-item small {
+            color: #777777;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           FOOTER
+           ========================= */
+
+        .footer {
+            background: #111111;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+
+        .footer p {
+            margin: 0;
+        }
+
+
+        /* =========================
+           TAMPILAN HP
+           ========================= */
+
+        @media (max-width: 700px) {
+
+            #kotak {
+                width: 96%;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .navi a {
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .komentar {
+                width: 100%;
+                padding: 20px;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .navi a {
+                display: block;
+                border-bottom: 1px solid #333333;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
 <div id="kotak">
 
-    <header>
+
+    <!-- HEADER -->
+
+    <div class="header">
+
         <h1>Palugada KuYy</h1>
-        <p>Website Digital Serba Ada</p>
-    </header>
-
-    <nav class="navi">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="produk.html">Produk</a></li>
-            <li><a href="kontak.html">Kontak</a></li>
-            <li><a href="tentang.html">Tentang</a></li>
-            <li><a href="galeri.html">Galeri</a></li>
-            <li><a href="bantuan.html">Bantuan</a></li>
-        </ul>
-    </nav>
-
-    <main>
-
-        <h2>Selamat Datang Di Palugada KuYy</h2>
 
         <p>
-            Website yang menyediakan semua kebutuhan digital
-            dengan mudah dan praktis.
+            Apa Yang Lu Mau Gua Ada
         </p>
 
-        <h2>Kenapa konsumen harus memilih website Palugada KuYy?</h2>
+    </div>
+
+
+    <!-- NAVIGASI -->
+
+    <div class="navi">
+
+        <a href="index.html">Home</a>
+
+        <a href="produk.html">Produk</a>
+
+        <a href="kontak.html">Kontak</a>
+
+        <a href="tentang.html">Tentang Kami</a>
+
+        <a href="galeri.html">Galeri</a>
+
+        <a href="bantuan.html">Bantuan</a>
+
+    </div>
+
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+        <h2>
+            Selamat Datang Di Palugada KuYy
+        </h2>
+
+        <p>
+            Website yang menyediakan semua kebutuhan
+            digital dengan mudah dan praktis.
+        </p>
+
+
+        <h3>
+            Mengapa konsumen harus memilih
+            website Palugada KuYy?
+        </h3>
+
 
         <div class="keunggulan">
-            <h3>Keunggulan Palugada KuYy</h3>
 
             <p>✔ Produk digital yang beragam</p>
+
             <p>✔ Mudah digunakan</p>
+
             <p>✔ Tampilan menarik</p>
+
             <p>✔ Praktis dan mudah digunakan</p>
-        </div>
-
-        <div class="komentar">
-
-            <h3>Komentar Pengunjung</h3>
-
-            <input
-                type="text"
-                id="nama"
-                placeholder="Nama kamu">
-
-            <textarea
-                id="isiKomentar"
-                placeholder="Tulis komentar kamu..."></textarea>
-
-            <button
-                type="button"
-                onclick="tambahKomentar()">
-                Kirim Komentar
-            </button>
-
-            <div id="daftarKomentar">
-                <p>Belum ada komentar.</p>
-            </div>
 
         </div>
 
-    </main>
 
-    <footer class="footer">
+    </div>
+
+
+    <!-- KOMENTAR -->
+
+    <div class="komentar">
+
+        <h3>
+            Komentar Pengunjung
+        </h3>
+
+
+        <input
+            type="text"
+            id="nama"
+            placeholder="Nama kamu"
+        >
+
+
+        <textarea
+            id="isiKomentar"
+            placeholder="Tulis komentar kamu..."
+        ></textarea>
+
+
+        <button
+            type="button"
+            onclick="tambahKomentar()"
+        >
+            Kirim Komentar
+        </button>
+
+
+        <div id="daftarKomentar">
+
+            <p>
+                Belum ada komentar.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
         <p>
             © 2026 Palugada KuYy | Website Digital Serba Ada
         </p>
-    </footer>
+
+    </div>
+
 
 </div>
+
+
+<!-- =========================
+     JAVASCRIPT KOMENTAR
+     ========================= -->
 
 <script>
 
@@ -94,33 +459,49 @@ function tambahKomentar() {
     const isi =
         document.getElementById("isiKomentar").value.trim();
 
+
     if (nama === "" || isi === "") {
+
         alert("Nama dan komentar harus diisi!");
+
         return;
+
     }
 
+
     const komentar = {
+
         nama: nama,
+
         isi: isi,
+
         tanggal: new Date().toLocaleString("id-ID")
+
     };
+
 
     let daftarKomentar =
         JSON.parse(
             localStorage.getItem("komentarPalugadaKuYy")
         ) || [];
 
+
     daftarKomentar.push(komentar);
+
 
     localStorage.setItem(
         "komentarPalugadaKuYy",
         JSON.stringify(daftarKomentar)
     );
 
+
     document.getElementById("nama").value = "";
+
     document.getElementById("isiKomentar").value = "";
 
+
     tampilkanKomentar();
+
 }
 
 
@@ -129,34 +510,55 @@ function tampilkanKomentar() {
     const daftar =
         document.getElementById("daftarKomentar");
 
+
     const komentar =
         JSON.parse(
             localStorage.getItem("komentarPalugadaKuYy")
         ) || [];
 
+
     daftar.innerHTML = "";
 
+
     if (komentar.length === 0) {
+
         daftar.innerHTML =
             "<p>Belum ada komentar.</p>";
+
         return;
+
     }
+
 
     komentar.forEach(function(item) {
 
         const div =
             document.createElement("div");
 
-        div.className = "komentar-item";
 
-        div.innerHTML = `
-            <strong>${aman(item.nama)}</strong>
-            <p>${aman(item.isi)}</p>
-            <small>${aman(item.tanggal)}</small>
-        `;
+        div.className =
+            "komentar-item";
+
+
+        div.innerHTML =
+
+            "<strong>" +
+            aman(item.nama) +
+            "</strong>" +
+
+            "<p>" +
+            aman(item.isi) +
+            "</p>" +
+
+            "<small>" +
+            aman(item.tanggal) +
+            "</small>";
+
 
         daftar.appendChild(div);
+
     });
+
 }
 
 
@@ -165,9 +567,12 @@ function aman(teks) {
     const div =
         document.createElement("div");
 
+
     div.textContent = teks;
 
+
     return div.innerHTML;
+
 }
 
 
@@ -175,5 +580,7 @@ tampilkanKomentar();
 
 </script>
 
+
 </body>
+
 </html>
