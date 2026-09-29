@@ -246,87 +246,66 @@
     </section>
 
 
-    <!-- ================= COMMENT SECTION ================= -->
+   <!-- ================= COMMENT SECTION ================= -->
 
-    <section id="komentar">
+<section id="komentar">
 
-        <div class="container">
+    <div class="container">
 
-            <div class="judul">
+        <div class="judul">
+            <h2>Comment Section</h2>
+            <p>Komentar dari pengunjung PalugadaKuYy</p>
+        </div>
 
-                <h2>Komentar Pengunjung</h2>
+        <!-- FORM KIRIM KOMENTAR -->
 
-                <p>
-                    Bagikan pendapat kamu tentang PalugadaKuYy
+        <div class="comment-form-box">
+
+            <h3>Tulis Komentar</h3>
+
+            <form id="commentForm">
+
+                <input
+                    type="text"
+                    id="namaKomentar"
+                    placeholder="Masukkan nama"
+                    required
+                >
+
+                <textarea
+                    id="isiKomentar"
+                    placeholder="Tulis komentar kamu..."
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    Kirim Komentar
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- TEMPAT KOMENTAR DITAMPILKAN -->
+
+        <div class="comment-section">
+
+            <h3>💬 Comment Section</h3>
+
+            <div id="daftarKomentar">
+
+                <p id="komentarKosong">
+                    Belum ada komentar.
                 </p>
 
             </div>
 
+        </div>
 
-            <div class="komentar-layout">
+    </div>
 
-
-                <!-- FORM KOMENTAR -->
-
-                <div class="komentar-form">
-
-                    <h3>
-                        Tulis Komentar
-                    </h3>
-
-                    <form id="commentForm">
-
-                        <input
-                            type="text"
-                            id="commentName"
-                            placeholder="Nama kamu"
-                            required
-                        >
-
-                        <select
-                            id="commentRating"
-                            required
-                        >
-                            <option value="">
-                                Pilih rating
-                            </option>
-
-                            <option value="5">
-                                ⭐⭐⭐⭐⭐
-                            </option>
-
-                            <option value="4">
-                                ⭐⭐⭐⭐
-                            </option>
-
-                            <option value="3">
-                                ⭐⭐⭐
-                            </option>
-
-                            <option value="2">
-                                ⭐⭐
-                            </option>
-
-                            <option value="1">
-                                ⭐
-                            </option>
-
-                        </select>
-
-                        <textarea
-                            id="commentText"
-                            placeholder="Tulis komentar kamu..."
-                            required
-                        ></textarea>
-
-                        <button type="submit">
-                            Kirim Komentar
-                        </button>
-
-                    </form>
-
-                </div>
-
+</section>
 
                 <!-- DAFTAR KOMENTAR -->
 
