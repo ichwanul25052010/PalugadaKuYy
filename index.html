@@ -1,370 +1,173 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>PalugadaKuYy</title>
+    <title>Palugada KuYy</title>
 
-    <link rel="stylesheet" href="style.css" type="text/css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
 <div id="kotak">
 
-
     <!-- HEADER -->
-
-    <div class="header">
-
-        <h1>PalugadaKuYy</h1>
-
-        <p>Apa Yang Lu Mau Gua Ada</p>
-
-    </div>
-
+    <header>
+        <h1>Palugada KuYy</h1>
+        <p>Website Digital Serba Ada</p>
+    </header>
 
     <!-- NAVIGASI -->
+    <nav class="navi">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="bantuan.html">Bantuan</a></li>
+        </ul>
+    </nav>
 
-    <div class="navi">
+    <!-- ISI -->
+    <main>
 
-        <a href="index.html">Home</a>
-
-        <a href="produk.html">Produk</a>
-
-        <a href="kontak.html">Kontak</a>
-
-        <a href="tentang.html">Tentang Kami</a>
-
-        <a href="galeri.html">Galeri</a>
-
-        <a href="bantuan.html">Bantuan</a>
-
-    </div>
-
-
-    <!-- CONTENT -->
-
-    <div class="content">
-
-
-        <img src="gambar (1).jpg" width="180px">
-
-
-        <h2>
-            Selamat Datang Di Palugada KuYy
-        </h2>
-
+        <h2>Selamat Datang Di Palugada KuYy</h2>
 
         <p>
-            Toko website yang menyediakan semua kebutuhan
-            digital dengan mudah dan praktis.
+            Website yang menyediakan semua kebutuhan digital
+            dengan mudah dan praktis.
         </p>
 
+        <h2>Kenapa konsumen harus memilih website Palugada KuYy?</h2>
 
-        <button type="button">
-            Like
-        </button>
+        <div class="keunggulan">
+            <h3>Keunggulan Palugada KuYy</h3>
 
+            <p>✔ Produk digital yang beragam</p>
+            <p>✔ Mudah digunakan</p>
+            <p>✔ Tampilan menarik</p>
+            <p>✔ Praktis dan mudah digunakan</p>
+        </div>
 
-        <button type="button">
-            Dislike
-        </button>
+        <!-- KOMENTAR -->
+        <div class="komentar">
 
+            <h3>Komentar Pengunjung</h3>
 
-        <h3>
-            Mengapa konsumen harus memilih website
-            Palugada KuYy?
-        </h3>
+            <input
+                type="text"
+                id="nama"
+                placeholder="Nama kamu"
+            >
 
+            <textarea
+                id="isiKomentar"
+                placeholder="Tulis komentar kamu..."
+            ></textarea>
 
-        <p>
-            Produknya beragam
-        </p>
+            <button type="button" onclick="tambahKomentar()">
+                Kirim Komentar
+            </button>
 
-
-        <p>
-            Mudah digunakan
-        </p>
-
-
-        <p>
-            Tampilan menarik
-        </p>
-
-
-        <p>
-            Praktis dan mudah digunakan
-        </p>
-
-    </div>
-
-
-    <!-- =========================
-         COMMENT SECTION
-    ========================== -->
-
-    <div class="komentar">
-
-
-        <h3>
-            Komentar Pengunjung
-        </h3>
-
-
-        <!-- INPUT NAMA -->
-
-        <input
-            type="text"
-            id="nama"
-            placeholder="Nama kamu"
-        >
-
-
-        <!-- INPUT KOMENTAR -->
-
-        <textarea
-            id="isiKomentar"
-            placeholder="Tulis komentar kamu..."
-        ></textarea>
-
-
-        <!-- TOMBOL KIRIM -->
-
-        <button
-            type="button"
-            onclick="tambahKomentar()"
-        >
-            Kirim Komentar
-        </button>
-
-
-        <!-- TEMPAT KOMENTAR MUNCUL -->
-
-        <div id="daftarKomentar">
-
-            <p>
-                Belum ada komentar.
-            </p>
+            <div id="daftarKomentar">
+                <p>Belum ada komentar.</p>
+            </div>
 
         </div>
 
-
-    </div>
-
+    </main>
 
     <!-- FOOTER -->
-
-    <div class="footer">
-
-        <p>
-            W 2026 Palugada KuYy |
-            Website Digital Serba Ada
-        </p>
-
-    </div>
-
+    <footer class="footer">
+        <p>© 2026 Palugada KuYy | Website Digital Serba Ada</p>
+    </footer>
 
 </div>
 
-
-<!-- =========================
-     JAVASCRIPT KOMENTAR
-========================== -->
-
+<!-- JAVASCRIPT KOMENTAR -->
 <script>
-
-
-/* ==================================
-   MENGAMBIL KOMENTAR DARI LOCAL STORAGE
-================================== */
-
-let komentar =
-    JSON.parse(
-        localStorage.getItem("komentarPalugadaKuYy")
-    ) || [];
-
-
-
-/* ==================================
-   FUNGSI MENAMBAHKAN KOMENTAR
-================================== */
 
 function tambahKomentar() {
 
-
-    /* Mengambil nama */
-
-    let nama =
-        document.getElementById("nama").value.trim();
-
-
-    /* Mengambil isi komentar */
-
-    let isi =
-        document.getElementById("isiKomentar").value.trim();
-
-
-    /* Mengecek apakah kosong */
+    const nama = document.getElementById("nama").value.trim();
+    const isi = document.getElementById("isiKomentar").value.trim();
 
     if (nama === "" || isi === "") {
-
         alert("Nama dan komentar harus diisi!");
-
         return;
-
     }
 
-
-    /* Membuat data komentar */
-
-    let dataKomentar = {
-
+    const komentar = {
         nama: nama,
-
         isi: isi,
-
-        tanggal:
-            new Date().toLocaleString("id-ID")
-
+        tanggal: new Date().toLocaleString("id-ID")
     };
 
+    let daftarKomentar =
+        JSON.parse(localStorage.getItem("komentarPalugadaKuYy")) || [];
 
-    /* Menambahkan komentar */
-
-    komentar.push(dataKomentar);
-
-
-    /* Menyimpan komentar */
+    daftarKomentar.push(komentar);
 
     localStorage.setItem(
         "komentarPalugadaKuYy",
-        JSON.stringify(komentar)
+        JSON.stringify(daftarKomentar)
     );
 
-
-    /* Menampilkan komentar */
-
-    tampilkanKomentar();
-
-
-    /* Mengosongkan input */
-
     document.getElementById("nama").value = "";
-
     document.getElementById("isiKomentar").value = "";
 
-
-    /* Pesan */
-
-    alert("Komentar berhasil dikirim!");
-
+    tampilkanKomentar();
 }
 
-
-
-/* ==================================
-   FUNGSI MENAMPILKAN KOMENTAR
-================================== */
 
 function tampilkanKomentar() {
 
-
-    let daftar =
+    const daftar =
         document.getElementById("daftarKomentar");
 
+    const komentar =
+        JSON.parse(localStorage.getItem("komentarPalugadaKuYy")) || [];
 
-    /* Menghapus isi sebelumnya */
+    if (komentar.length === 0) {
+        daftar.innerHTML = "<p>Belum ada komentar.</p>";
+        return;
+    }
 
     daftar.innerHTML = "";
 
+    komentar.forEach(function(item) {
 
-    /* Jika belum ada komentar */
+        const div = document.createElement("div");
 
-    if (komentar.length === 0) {
+        div.className = "komentar-item";
 
-        daftar.innerHTML =
-            "<p>Belum ada komentar.</p>";
-
-        return;
-
-    }
-
-
-    /* Menampilkan setiap komentar */
-
-    komentar.forEach(function(data) {
-
-
-        let komentarItem =
-            document.createElement("div");
-
-
-        komentarItem.className =
-            "komentar-item";
-
-
-        komentarItem.innerHTML = `
-
-            <strong>
-                ${aman(data.nama)}
-            </strong>
-
-            <small>
-                ${data.tanggal}
-            </small>
-
-            <p>
-                ${aman(data.isi)}
-            </p>
-
+        div.innerHTML = `
+            <strong>${aman(item.nama)}</strong>
+            <p>${aman(item.isi)}</p>
+            <small>${aman(item.tanggal)}</small>
         `;
 
-
-        daftar.appendChild(
-            komentarItem
-        );
-
+        daftar.appendChild(div);
     });
-
 }
 
 
-
-/* ==================================
-   MENGAMANKAN TEKS
-================================== */
-
 function aman(teks) {
 
-    let div =
-        document.createElement("div");
+    const div = document.createElement("div");
 
     div.textContent = teks;
 
     return div.innerHTML;
-
 }
 
 
-
-/* ==================================
-   MENAMPILKAN KOMENTAR SAAT
-   WEBSITE DIBUKA
-================================== */
-
 tampilkanKomentar();
-
 
 </script>
 
-
 </body>
-
 </html>
