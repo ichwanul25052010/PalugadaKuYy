@@ -1,51 +1,548 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="id">
+
 <head>
-<link rel="stylesheet" href="style.css" type="text/css" href=">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PalugadaKuYy - Produk Digital</title>
+
+    <!-- Menghubungkan HTML dengan CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div id="kotak">
-    <div class="header">
-      <h1>PalugadaKuYy</h1>
-      <p>Apa Yang Lu Mau Gua Ada</p>
-  </div>
-  <div class="navi">
-       <a href="index.html">home</a>
-       <a href="produk.html">produk</a>
-       <a href="kontak.html">kontak</a>
-       <a href="tentang.html">tentang kami</a>
-       <a href="galeri.html">galeri</a>
-       <a href=bantuan.html">bantuan</a>
-  </div>
-  <div class="content">
-      <img src="gambar (1).jpg" width="180"px> 
-      <h2>Selamat Datang Di Palugada KuYy</h2>
-      <p>toko website yang menyediakan semua kebutuhan digital dengan mudah dan praktis</p>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+        <nav>
+
+            <div class="logo">
+                Palugada<span>KuYy</span>
+            </div>
+
+            <ul class="menu">
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#tentang">Tentang</a>
+                </li>
+
+                <li>
+                    <a href="#produk">Produk</a>
+                </li>
+
+                <li>
+                    <a href="#keunggulan">Keunggulan</a>
+                </li>
+
+                <li>
+                    <a href="#testimoni">Testimoni</a>
+                </li>
+
+                <li>
+                    <a href="#kontak">Kontak</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
 
 
-      <button> Like</button>
-      <button>Dislike</button>
+    <!-- ================= HOME ================= -->
 
-      <h3>mengapa konsumen harus memilih website Palugada KuYy?</h3>
+    <section id="home">
 
-      <p>produknya beragam</P>
-      <p>mudah digunakan</p>
-      <p>tampilan menarik</p>
-      <p>praktis dan mudah digunakan</p>
-  </div>
+        <div class="home-content">
 
-  <!-- komentar-->
-  <div class="komentar">
-      <h3>komentar pengunjung</h3>
+            <h1>
+                Selamat Datang di
+                <span>PalugadaKuYy</span>
+            </h1>
 
-  <input type="text" id="nama" placeholder="nama kamu">
-  <textarea id="isi komentar" placeholder="tulis komentar kamu..."></textarea>
-  <button onclick="tambah komentar()">kirim komentar</button>
-  <div id="daftar komentar"></div>
-  </div>
+            <p>
+                Temukan berbagai produk digital yang praktis,
+                menarik, dan mudah digunakan.
+            </p>
 
-  <div clas="footer"
-      <p>W 2026 Palugada KuYy | Website Digital Serba Ada</p>
-</div>
+            <a href="#produk" class="btn">
+                Lihat Produk
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TENTANG ================= -->
+
+    <section id="tentang">
+
+        <div class="container">
+
+            <div class="judul">
+
+                <h2>Tentang Kami</h2>
+
+                <p>
+                    Mengenal PalugadaKuYy lebih dekat
+                </p>
+
+            </div>
+
+
+            <div class="tentang-box">
+
+                <div>
+
+                    <h3>PalugadaKuYy</h3>
+
+                    <p>
+                        PalugadaKuYy adalah platform yang menyediakan
+                        berbagai produk digital untuk membantu kebutuhan
+                        belajar, kreativitas, dan aktivitas sehari-hari.
+                    </p>
+
+                    <p>
+                        Kami menyediakan produk yang praktis,
+                        mudah digunakan, dan dapat diakses secara digital.
+                    </p>
+
+                </div>
+
+
+                <div class="tentang-card">
+
+                    <h3>
+                        Digital • Praktis • Kreatif
+                    </h3>
+
+                    <p>
+                        Satu tempat untuk berbagai kebutuhan digital.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUK ================= -->
+
+    <section id="produk">
+
+        <div class="container">
+
+            <div class="judul">
+
+                <h2>Produk Kami</h2>
+
+                <p>
+                    Pilihan produk digital PalugadaKuYy
+                </p>
+
+            </div>
+
+
+            <div class="produk-container">
+
+
+                <!-- PRODUK 1 -->
+
+                <div class="produk-card">
+
+                    <div class="icon">
+                        📚
+                    </div>
+
+                    <h3>
+                        E-Book Edukasi
+                    </h3>
+
+                    <p>
+                        E-book digital dengan materi dan aktivitas
+                        yang menarik untuk pembelajaran.
+                    </p>
+
+                    <div class="harga">
+                        Rp15.000
+                    </div>
+
+                    <a href="#kontak" class="produk-btn">
+                        Pesan
+                    </a>
+
+                </div>
+
+
+                <!-- PRODUK 2 -->
+
+                <div class="produk-card">
+
+                    <div class="icon">
+                        🎨
+                    </div>
+
+                    <h3>
+                        Template Digital
+                    </h3>
+
+                    <p>
+                        Template siap digunakan untuk berbagai
+                        kebutuhan desain dan aktivitas.
+                    </p>
+
+                    <div class="harga">
+                        Rp10.000
+                    </div>
+
+                    <a href="#kontak" class="produk-btn">
+                        Pesan
+                    </a>
+
+                </div>
+
+
+                <!-- PRODUK 3 -->
+
+                <div class="produk-card">
+
+                    <div class="icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Produk Digital Lainnya
+                    </h3>
+
+                    <p>
+                        Berbagai produk digital lainnya akan
+                        tersedia di PalugadaKuYy.
+                    </p>
+
+                    <div class="harga">
+                        Segera Hadir
+                    </div>
+
+                    <a href="#kontak" class="produk-btn">
+                        Info
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= KEUNGGULAN ================= -->
+
+    <section id="keunggulan">
+
+        <div class="container">
+
+            <div class="judul">
+
+                <h2>
+                    Kenapa PalugadaKuYy?
+                </h2>
+
+                <p>
+                    Beberapa alasan menggunakan produk kami
+                </p>
+
+            </div>
+
+
+            <div class="keunggulan-container">
+
+
+                <div class="keunggulan-card">
+
+                    <div class="icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        Praktis
+                    </h3>
+
+                    <p>
+                        Produk digital mudah digunakan.
+                    </p>
+
+                </div>
+
+
+                <div class="keunggulan-card">
+
+                    <div class="icon">
+                        📱
+                    </div>
+
+                    <h3>
+                        Digital
+                    </h3>
+
+                    <p>
+                        Dapat digunakan melalui perangkat digital.
+                    </p>
+
+                </div>
+
+
+                <div class="keunggulan-card">
+
+                    <div class="icon">
+                        🎯
+                    </div>
+
+                    <h3>
+                        Bermanfaat
+                    </h3>
+
+                    <p>
+                        Dibuat untuk membantu berbagai kebutuhan.
+                    </p>
+
+                </div>
+
+
+                <div class="keunggulan-card">
+
+                    <div class="icon">
+                        💡
+                    </div>
+
+                    <h3>
+                        Kreatif
+                    </h3>
+
+                    <p>
+                        Mengutamakan ide dan desain yang menarik.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TESTIMONI ================= -->
+
+    <section id="testimoni">
+
+        <div class="container">
+
+            <div class="judul">
+
+                <h2>
+                    Testimoni
+                </h2>
+
+                <p>
+                    Pendapat pelanggan
+                </p>
+
+            </div>
+
+
+            <div class="testimoni-container">
+
+
+                <div class="testimoni-card">
+
+                    <div class="bintang">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        Produk mudah digunakan dan cukup membantu.
+                    </p>
+
+                    <h3>
+                        Pelanggan 1
+                    </h3>
+
+                </div>
+
+
+                <div class="testimoni-card">
+
+                    <div class="bintang">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        Desain produknya menarik dan praktis.
+                    </p>
+
+                    <h3>
+                        Pelanggan 2
+                    </h3>
+
+                </div>
+
+
+                <div class="testimoni-card">
+
+                    <div class="bintang">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        Proses pembelian cukup sederhana.
+                    </p>
+
+                    <h3>
+                        Pelanggan 3
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= KONTAK ================= -->
+
+    <section id="kontak">
+
+        <div class="container">
+
+            <div class="judul">
+
+                <h2>
+                    Kontak
+                </h2>
+
+                <p>
+                    Hubungi PalugadaKuYy
+                </p>
+
+            </div>
+
+
+            <div class="kontak-container">
+
+
+                <!-- INFORMASI KONTAK -->
+
+                <div class="kontak-info">
+
+                    <h3>
+                        Butuh Produk Digital?
+                    </h3>
+
+                    <p>
+                        Silakan hubungi kami untuk mendapatkan
+                        informasi mengenai produk yang tersedia.
+                    </p>
+
+                    <p>
+                        📧 Email:
+                        palugadakuyy@gmail.com
+                    </p>
+
+                    <p>
+                        📱 WhatsApp:
+                        08xxxxxxxxxx
+                    </p>
+
+                    <p>
+                        📍 Indonesia
+                    </p>
+
+                </div>
+
+
+                <!-- FORM KONTAK -->
+
+                <form onsubmit="kirimPesan(event)">
+
+                    <input
+                        type="text"
+                        id="nama"
+                        placeholder="Nama"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Email"
+                        required
+                    >
+
+                    <textarea
+                        id="pesan"
+                        placeholder="Tulis pesan..."
+                        required
+                    ></textarea>
+
+                    <button type="submit">
+                        Kirim Pesan
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026
+            <span>PalugadaKuYy</span>.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        function kirimPesan(event) {
+
+            event.preventDefault();
+
+            const nama =
+                document.getElementById("nama").value;
+
+            alert(
+                "Terima kasih, " +
+                nama +
+                "! Pesan kamu sudah diterima."
+            );
+
+            document.querySelector("form").reset();
+
+        }
+
+    </script>
+
 </body>
+
 </html>
