@@ -45,7 +45,6 @@
         </p>
 
 
-        <!-- TOMBOL -->
         <button type="button">Like</button>
         <button type="button">Dislike</button>
 
@@ -58,11 +57,8 @@
         <div class="keunggulan">
 
             <p>✔ Produknya beragam</p>
-
             <p>✔ Mudah digunakan</p>
-
             <p>✔ Tampilan menarik</p>
-
             <p>✔ Praktis dan mudah digunakan</p>
 
         </div>
@@ -115,8 +111,11 @@
 </div>
 
 
-<!-- JAVASCRIPT KOMENTAR -->
 <script>
+
+/* =========================
+   TAMBAH KOMENTAR
+   ========================= */
 
 function tambahKomentar() {
 
@@ -132,6 +131,7 @@ function tambahKomentar() {
         alert("Nama dan komentar harus diisi!");
 
         return;
+
     }
 
 
@@ -171,6 +171,10 @@ function tambahKomentar() {
 }
 
 
+/* =========================
+   MENAMPILKAN KOMENTAR
+   ========================= */
+
 function tampilkanKomentar() {
 
     const daftar =
@@ -186,16 +190,18 @@ function tampilkanKomentar() {
     daftar.innerHTML = "";
 
 
-    komentar.forEach(function(item) {
+    komentar.forEach(function(item, index) {
 
         const kotak =
             document.createElement("div");
 
 
-        kotak.className = "komentar-item";
+        kotak.className =
+            "komentar-item";
 
 
         kotak.innerHTML =
+
             "<strong>" +
             aman(item.nama) +
             "</strong>" +
@@ -206,7 +212,18 @@ function tampilkanKomentar() {
 
             "<small>" +
             aman(item.tanggal) +
-            "</small>";
+            "</small>" +
+
+            "<br><br>" +
+
+            "<button " +
+            "type='button' " +
+            "class='hapus-komentar' " +
+            "onclick='hapusKomentar(" +
+            index +
+            ")'>" +
+            "Hapus" +
+            "</button>";
 
 
         daftar.appendChild(kotak);
@@ -216,21 +233,69 @@ function tampilkanKomentar() {
 }
 
 
+/* =========================
+   HAPUS KOMENTAR
+   ========================= */
+
+function hapusKomentar(index) {
+
+    const yakin =
+        confirm("Apakah kamu yakin ingin menghapus komentar ini?");
+
+
+    if (!yakin) {
+
+        return;
+
+    }
+
+
+    let komentar =
+        JSON.parse(
+            localStorage.getItem("komentarPalugadaKuYy")
+        ) || [];
+
+
+    komentar.splice(index, 1);
+
+
+    localStorage.setItem(
+        "komentarPalugadaKuYy",
+        JSON.stringify(komentar)
+    );
+
+
+    tampilkanKomentar();
+
+}
+
+
+/* =========================
+   KEAMANAN TEKS
+   ========================= */
+
 function aman(teks) {
 
     const div =
         document.createElement("div");
 
+
     div.textContent = teks;
+
 
     return div.innerHTML;
 
 }
 
 
+/* =========================
+   TAMPILKAN SAAT HALAMAN DIBUKA
+   ========================= */
+
 tampilkanKomentar();
 
 </script>
+
 
 </body>
 
