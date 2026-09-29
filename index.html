@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Palugada KuYy</title>
 
     <link rel="stylesheet" href="style.css">
@@ -13,13 +13,11 @@
 
 <div id="kotak">
 
-    <!-- HEADER -->
     <header>
         <h1>Palugada KuYy</h1>
         <p>Website Digital Serba Ada</p>
     </header>
 
-    <!-- NAVIGASI -->
     <nav class="navi">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -31,7 +29,6 @@
         </ul>
     </nav>
 
-    <!-- ISI -->
     <main>
 
         <h2>Selamat Datang Di Palugada KuYy</h2>
@@ -52,7 +49,6 @@
             <p>✔ Praktis dan mudah digunakan</p>
         </div>
 
-        <!-- KOMENTAR -->
         <div class="komentar">
 
             <h3>Komentar Pengunjung</h3>
@@ -60,15 +56,15 @@
             <input
                 type="text"
                 id="nama"
-                placeholder="Nama kamu"
-            >
+                placeholder="Nama kamu">
 
             <textarea
                 id="isiKomentar"
-                placeholder="Tulis komentar kamu..."
-            ></textarea>
+                placeholder="Tulis komentar kamu..."></textarea>
 
-            <button type="button" onclick="tambahKomentar()">
+            <button
+                type="button"
+                onclick="tambahKomentar()">
                 Kirim Komentar
             </button>
 
@@ -80,20 +76,23 @@
 
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2026 Palugada KuYy | Website Digital Serba Ada</p>
+        <p>
+            © 2026 Palugada KuYy | Website Digital Serba Ada
+        </p>
     </footer>
 
 </div>
 
-<!-- JAVASCRIPT KOMENTAR -->
 <script>
 
 function tambahKomentar() {
 
-    const nama = document.getElementById("nama").value.trim();
-    const isi = document.getElementById("isiKomentar").value.trim();
+    const nama =
+        document.getElementById("nama").value.trim();
+
+    const isi =
+        document.getElementById("isiKomentar").value.trim();
 
     if (nama === "" || isi === "") {
         alert("Nama dan komentar harus diisi!");
@@ -107,7 +106,9 @@ function tambahKomentar() {
     };
 
     let daftarKomentar =
-        JSON.parse(localStorage.getItem("komentarPalugadaKuYy")) || [];
+        JSON.parse(
+            localStorage.getItem("komentarPalugadaKuYy")
+        ) || [];
 
     daftarKomentar.push(komentar);
 
@@ -129,18 +130,22 @@ function tampilkanKomentar() {
         document.getElementById("daftarKomentar");
 
     const komentar =
-        JSON.parse(localStorage.getItem("komentarPalugadaKuYy")) || [];
-
-    if (komentar.length === 0) {
-        daftar.innerHTML = "<p>Belum ada komentar.</p>";
-        return;
-    }
+        JSON.parse(
+            localStorage.getItem("komentarPalugadaKuYy")
+        ) || [];
 
     daftar.innerHTML = "";
 
+    if (komentar.length === 0) {
+        daftar.innerHTML =
+            "<p>Belum ada komentar.</p>";
+        return;
+    }
+
     komentar.forEach(function(item) {
 
-        const div = document.createElement("div");
+        const div =
+            document.createElement("div");
 
         div.className = "komentar-item";
 
@@ -157,7 +162,8 @@ function tampilkanKomentar() {
 
 function aman(teks) {
 
-    const div = document.createElement("div");
+    const div =
+        document.createElement("div");
 
     div.textContent = teks;
 
