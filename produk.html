@@ -1,34 +1,76 @@
 <!doctype html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Produk - PalugadaKuYy</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Load Supabase JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 
 <div id="kotak">
-
     <div class="header">
         <h1>PalugadaKuYy</h1>
         <p>Apa Yang Lu Mau Gua Ada</p>
     </div>
+    
     <div class="navi">
         <a href="index.html">Home</a>
-        <a href="tentang.html">Tentang Kami</a>
         <a href="produk.html">Produk</a>
-        <a href="galeri.html">Galeri</a>
         <a href="kontak.html">Kontak</a>
+        <a href="tentang.html">Tentang Kami</a>
+        <a href="galeri.html">Galeri</a>
         <a href="bantuan.html">Bantuan</a>
     </div>
+
     <div class="content">
         <h2>Produk Kami</h2>
         <p>Berbagai produk digital tersedia di PalugadaKuYy.</p>
-        <p>E-book, template, desain, dan produk digital lainnya.</p>
+        
+        <!-- Wadah untuk menampung daftar produk dari Supabase -->
+        <div id="daftarProduk" style="margin-top: 20px;"></div>
     </div>
+
     <div class="footer">
-        W 2026 PalugadaKuYy | Website Digital Serba Ada
+        <p>© 2026 PalugadaKuYy | Website Digital Serba Ada</p>
     </div>
 </div>
+
+<script>
+  // Ganti kredensial dengan Project URL dan Anon Key Anda dari menu Project Settings > API
+  const SUPABASE_URL = 'https://mcxerfmuxuuyxggdhir.supabase.co';[cite: 9]
+  const SUPABASE_ANON_KEY = 'KUNCI_ANON_PUBLIC_ANDA';
+  const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+  async function muatProduk() {
+    const { data, error } = await supabaseClient
+      .from('produk')
+      .select('*')
+      .order('created_at', { ascending: false });
+
+    if (error) {
+      console.error('Gagal mengambil data produk:', error);
+      return;
+    }
+
+    const container = document.getElementById('daftarProduk');
+    container.innerHTML = '';
+
+    data.forEach(item => {
+      const card = document.createElement('div');
+      card.style.cssText = 'border: 1px solid #ccc; padding: 15px; margin: 10px auto; max-width: 400px; border-radius: 8px; background: #fff;';
+      card.innerHTML = `
+        <h3 style="margin-top: 0;">${item.nama_produk}</h3>
+        <p><strong>Harga:</strong> Rp ${item.harga.toLocaleString()}</p>
+        <p>${item.deskripsi || ''}</p>
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  muatProduk();
+</script>
 
 </body>
 </html>
