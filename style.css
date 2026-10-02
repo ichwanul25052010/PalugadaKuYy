@@ -1,354 +1,148 @@
-/* =========================
-   DASAR
-   ========================= */
-
-* {
-    box-sizing: border-box;
-}
-
 body {
-    background: #f5f5f5;
-    margin: 0;
-    color: #222222;
+    background: #f5f5f5; 
+    margin: 0; 
+    color: #222222; 
     font-family: Arial, sans-serif;
 }
-
 #kotak {
-    width: 90%;
-    max-width: 1200px;
-    background: white;
-    margin: auto;
+    width: 90%; 
+    background: white; 
+    margin: auto; 
     min-height: 100vh;
 }
-
-
-/* =========================
-   HEADER
-   ========================= */
-
 .header {
-    background: #111111;
-    color: #D4AF37;
-    padding: 30px;
+    background: #111111; 
+    color: #D4AF37; 
+    padding: 30px; 
     text-align: center;
 }
-
 .header h1 {
-    margin: 0;
+    margin: 0; 
     font-size: 36px;
 }
-
 .header p {
-    color: white;
-    font-size: 18px;
+    color: white; 
+    font-size: 18px; 
     margin-top: 10px;
 }
-
-
-/* =========================
-   NAVIGASI
-   ========================= */
-
-.navi {
-    text-align: center;
-    background: #D4AF37;
-    padding: 15px;
+.logo {
+    width: 200px; 
+    height: 100px; 
+    background: #FFFFFF; 
+    float: left;
 }
-
-.navi a {
-    color: #111111;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 15px;
-    font-size: 17px;
-    transition: 0.3s;
-}
-
-.navi a:hover {
-    color: white;
-}
-
-
-/* =========================
-   CONTENT
-   ========================= */
-
 .content {
-    text-align: center;
+    text-align: center; 
     padding: 30px;
 }
-
 .content img {
-    width: 300px;
+    width: 300px; 
+    height: auto; 
     max-width: 90%;
-    height: auto;
 }
-
 .content h2 {
-    font-size: 28px;
-    color: #111111;
+    font-size: 28px; 
+    color: #111111; 
     margin-top: 25px;
 }
-
-.content h3 {
-    margin-top: 30px;
-}
-
 .content p {
-    font-size: 17px;
+    font-size: 17px; 
     line-height: 1.6;
 }
 
-
-/* =========================
-   KEUNGGULAN
-   ========================= */
-
+/* DAFTAR KEUNGGULAN */
 .keunggulan {
-    max-width: 600px;
-    margin: 20px auto;
+    max-width: 600px; 
+    margin: 20px auto; 
     text-align: left;
 }
-
 .keunggulan p {
-    background: #f5f5f5;
-    padding: 12px;
-    margin: 8px 0;
+    background: #f5f5f5; 
+    padding: 12px; 
+    margin: 8px 0; 
     border-left: 5px solid #D4AF37;
+}
+.navi {
+    text-align: center; 
+    min-height: 50px; 
+    background: #D4AF37; 
+    padding: 15px 0; 
+    box-sizing: border-box;
+}
+.navi a {
+    color: #111111; 
+    text-decoration: none; 
+    font-weight: bold; 
+    margin: 0 15px; 
+    font-size: 17px;
+}
+.navi a:hover {
+    color: white;
+}
+.footer {
+    background: #111111; 
+    color: white; 
+    text-align: center; 
+    padding: 15px;
+}
+
+/* TOMBOL */
+button {
+    background-color: #111111; 
+    text-align: center; 
+    color: white; 
+    border: none; 
+    padding: 12px 20px; 
+    margin: 5px; 
+    border-radius: 8px; 
+    font-weight: bold; 
+    cursor: pointer;
+}
+button:hover {
+    background: #D4AF37; 
+    color: #111;
+}
+
+/* KOMENTAR */
+.komentar {
+    width: 600px; 
+    max-width: 90%; 
+    margin: 30px auto; 
+    padding: 20px; 
+    background: #f5f5f5; 
+    border-radius: 10px; 
+    box-sizing: border-box;
+}
+.komentar h3 {
+    margin-top: 0; 
+    color: #111111;
+}
+.komentar input,
+.komentar textarea {
+    width: 100%; 
+    padding: 12px; 
+    margin-bottom: 10px; 
+    box-sizing: border-box; 
+    border: 1px solid #ccc; 
+    border-radius: 6px; 
+    font-family: Arial, sans-serif;
+}
+.komentar textarea {
+    height: 100px; 
+    resize: vertical;
+}
+#daftarKomentar { 
+    margin-top: 20px;
+    text-align: left;
+}
+.komentar-item {
+    background: white; 
+    padding: 12px; 
+    margin-bottom: 10px; 
+    border-left: 5px solid #D4AF37; 
     border-radius: 5px;
 }
-
-
-/* =========================
-   TOMBOL
-   ========================= */
-
-button {
-    background-color: #111111;
-    text-align: center;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    margin: 5px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-button:hover {
-    background: #D4AF37;
-    color: #111111;
-}
-
-
-/* =========================
-   KOMENTAR
-   ========================= */
-
-.komentar {
-    width: 600px;
-    max-width: 90%;
-    margin: 40px auto;
-    padding: 25px;
-    background: #f5f5f5;
-    border-radius: 15px;
-    box-sizing: border-box;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-}
-
-.komentar h3 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #111111;
-    text-align: center;
-    font-size: 24px;
-}
-
-
-/* INPUT */
-
-.komentar input {
-    width: 100%;
-    padding: 13px;
-    margin-bottom: 12px;
-    box-sizing: border-box;
-    border: 1px solid #cccccc;
-    border-radius: 8px;
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    outline: none;
-}
-
-
-/* TEXTAREA */
-
-.komentar textarea {
-    width: 100%;
-    height: 110px;
-    padding: 13px;
-    margin-bottom: 12px;
-    box-sizing: border-box;
-    border: 1px solid #cccccc;
-    border-radius: 8px;
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    resize: vertical;
-    outline: none;
-}
-
-
-/* FOCUS */
-
-.komentar input:focus,
-.komentar textarea:focus {
-    border-color: #D4AF37;
-    box-shadow: 0 0 5px rgba(212, 175, 55, 0.4);
-}
-
-
-/* TOMBOL KOMENTAR */
-
-.komentar button {
-    width: 100%;
-    background: #111111;
-    color: white;
-    border: none;
-    padding: 13px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 15px;
-}
-
-.komentar button:hover {
-    background: #D4AF37;
-    color: #111111;
-}
-
-
-/* DAFTAR KOMENTAR */
-
-#daftarKomentar {
-    margin-top: 25px;
-}
-
-
-/* KARTU KOMENTAR */
-
-.komentar-item {
-    background: white;
-    padding: 15px;
-    margin-bottom: 12px;
-    border-left: 5px solid #D4AF37;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
-}
-
-
-/* NAMA */
-
-.komentar-item strong {
-    display: block;
-    margin-bottom: 6px;
-    color: #111111;
-    font-size: 16px;
-}
-
-
-/* ISI */
-
-.komentar-item p {
-    margin: 0 0 8px;
-    color: #333333;
-    line-height: 1.5;
-    font-size: 15px;
-}
-
-
-/* TANGGAL */
-
-.komentar-item small {
-    color: #888888;
-    font-size: 12px;
-}
-
-
-/* =========================
-   FOOTER
-   ========================= */
-
-.footer {
-    background: #111111;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-
-.footer p {
-    margin: 0;
-}
-
-
-/* =========================
-   HP
-   ========================= */
-
-@media (max-width: 700px) {
-
-    #kotak {
-        width: 96%;
-    }
-
-    .header h1 {
-        font-size: 28px;
-    }
-
-    .navi a {
-        display: inline-block;
-        margin: 5px 8px;
-        font-size: 14px;
-    }
-
-    .content {
-        padding: 20px;
-    }
-
-    .komentar {
-        width: 95%;
-    }
-
-}
-
-
-@media (max-width: 450px) {
-
-    .navi a {
-        display: block;
-        margin: 0;
-        padding: 10px;
-    }
-
-    .header h1 {
-        font-size: 24px;
-    }
-
-}
-/* =========================
-   TOMBOL HAPUS KOMENTAR
-   ========================= */
-
-.hapus-komentar {
-    width: auto !important;
-    background: #111111 !important;
-    color: white !important;
-    padding: 8px 15px !important;
-    margin: 5px 0 0 !important;
-    border-radius: 6px !important;
-    font-size: 13px !important;
-    cursor: pointer;
-}
-
-.hapus-komentar:hover {
-    background: #D4AF37 !important;
-    color: #111111 !important;
+.komentar-item strong { 
+    display: block; 
+    margin-bottom: 5px;
 }
