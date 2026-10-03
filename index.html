@@ -1,120 +1,656 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PalugadaKuYy - Home</title>
+
+    <title>PalugadaKuYy - Website Digital Serba Ada</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <!-- SDK Supabase JS -->
+
+    <!-- SUPABASE -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
+
+
 <body>
 
-<div id="kotak">
-    <div class="header">
-        <h1>PalugadaKuYy</h1>
-        <p>Apa Yang Lu Mau Gua Ada</p>
+    <!-- =========================
+         KOTAK UTAMA
+    ========================== -->
+
+    <div id="kotak">
+
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <header class="header">
+
+            <h1>PalugadaKuYy</h1>
+
+            <p>Apa Yang Lu Mau Gua Ada</p>
+
+        </header>
+
+
+        <!-- =========================
+             NAVIGASI
+        ========================== -->
+
+        <nav class="navi">
+
+            <a href="index.html">Home</a>
+
+            <a href="produk.html">Produk</a>
+
+            <a href="kontak.html">Kontak</a>
+
+            <a href="tentang.html">Tentang Kami</a>
+
+            <a href="galeri.html">Galeri</a>
+
+            <a href="bantuan.html">Bantuan</a>
+
+        </nav>
+
+
+        <!-- =========================
+             CONTENT
+        ========================== -->
+
+        <main class="content">
+
+
+            <!-- GAMBAR -->
+
+            <img
+                src="gambar (1).jpg"
+                width="180"
+                alt="PalugadaKuYy"
+            >
+
+
+            <!-- JUDUL -->
+
+            <h2>
+                Selamat Datang Di Palugada KuYy
+            </h2>
+
+
+            <!-- DESKRIPSI -->
+
+            <p>
+                Toko website yang menyediakan semua kebutuhan
+                digital dengan mudah dan praktis.
+            </p>
+
+
+            <!-- =========================
+                 LIKE DAN DISLIKE
+            ========================== -->
+
+            <div class="reaksi">
+
+                <button
+                    type="button"
+                    onclick="likeWebsite()"
+                >
+                    👍 Like
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="dislikeWebsite()"
+                >
+                    👎 Dislike
+                </button>
+
+
+                <p>
+
+                    Like:
+                    <span id="jumlahLike">0</span>
+
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+
+                    Dislike:
+                    <span id="jumlahDislike">0</span>
+
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 KEUNGGULAN
+            ========================== -->
+
+            <h3>
+                Mengapa konsumen harus memilih
+                website Palugada KuYy?
+            </h3>
+
+
+            <p>
+                ✓ Produknya beragam
+            </p>
+
+
+            <p>
+                ✓ Mudah digunakan
+            </p>
+
+
+            <p>
+                ✓ Tampilan menarik
+            </p>
+
+
+            <p>
+                ✓ Praktis dan mudah digunakan
+            </p>
+
+
+        </main>
+
+
+
+        <!-- =========================
+             KOMENTAR PENGUNJUNG
+        ========================== -->
+
+        <section class="komentar">
+
+            <h3>
+                Komentar Pengunjung
+            </h3>
+
+
+            <!-- FORM KOMENTAR -->
+
+            <form id="formKomentar">
+
+
+                <!-- NAMA -->
+
+                <input
+                    type="text"
+                    id="nama"
+                    placeholder="Nama kamu"
+                    maxlength="50"
+                    required
+                >
+
+
+                <br>
+                <br>
+
+
+                <!-- KOMENTAR -->
+
+                <textarea
+                    id="isiKomentar"
+                    placeholder="Tulis komentar kamu..."
+                    maxlength="500"
+                    rows="5"
+                    required
+                ></textarea>
+
+
+                <br>
+                <br>
+
+
+                <!-- TOMBOL -->
+
+                <button
+                    type="submit"
+                >
+                    Kirim Komentar
+                </button>
+
+
+            </form>
+
+
+            <!-- STATUS -->
+
+            <p id="statusKomentar"></p>
+
+
+            <hr>
+
+
+            <!-- DAFTAR KOMENTAR -->
+
+            <h3>
+                Komentar Pengunjung:
+            </h3>
+
+
+            <div id="daftarKomentar">
+
+                Memuat komentar...
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+
+        <footer class="footer">
+
+            <p>
+                W 2026 Palugada KuYy |
+                Website Digital Serba Ada
+            </p>
+
+        </footer>
+
+
     </div>
-    <div class="navi">
-        <a href="index.html">Home</a>
-        <a href="produk.html">Produk</a>
-        <a href="kontak.html">Kontak</a>
-        <a href="tentang.html">Tentang Kami</a>
-        <a href="galeri.html">Galeri</a>
-        <a href="bantuan.html">Bantuan</a>
-    </div>
-    <div class="content">
-        <img src="gambar (1).jpg" alt="Gambar Utama"> 
-        <h2>Selamat Datang Di PalugadaKuYy</h2>
-        <p>Toko website yang menyediakan semua kebutuhan digital dengan mudah dan praktis.</p>
 
-        <button>Like</button>
-        <button>Dislike</button>
 
-        <h3>Mengapa konsumen harus memilih website PalugadaKuYy?</h3>
-        <p>• Produknya beragam</p>
-        <p>• Mudah digunakan</p>
-        <p>• Tampilan menarik</p>
-        <p>• Praktis dan mudah digunakan</p>
-    </div>
 
-    <!-- Form Komentar -->
-    <div class="komentar">
-        <h3>Komentar Pengunjung</h3>
+    <!-- ==================================================
+         JAVASCRIPT
+    =================================================== -->
 
-        <input type="text" id="nama" placeholder="Nama kamu">
-        <textarea id="isiKomentar" placeholder="Tulis komentar kamu..."></textarea>
-        <button onclick="tambahKomentar()">Kirim Komentar</button>
+    <script>
 
-        <div id="daftarKomentar"></div>
-    </div>
 
-    <div class="footer">
-        <p>© 2026 PalugadaKuYy | Website Digital Serba Ada</p>
-    </div>
-</div>
+        /* ==================================================
+           1. PENGATURAN SUPABASE
+        ================================================== */
 
-<script>
-  // Inisialisasi Supabase
-  const SUPABASE_URL = 'https://mcxerfmuxuuyxggdhir.supabase.co';
-  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1jeGVyZm11eHV1eXV4Z2dkaGlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA2MTkxNzQsImV4cCI6MjEwNjE5NTE3NH0.Vb4i3jz9Ieh0kOLt__Rhdpev2YR_v6OgQzrx7PJ9s9U).
-  const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-  // Ambil data komentar dari Supabase
-  async function muatKomentar() {
-    const { data, error } = await supabaseClient
-      .from('komentar')
-      .select('*')
-      .order('created_at', { ascending: false });
+        /*
+           GANTI BAGIAN DI BAWAH INI
+           DENGAN DATA DARI SUPABASE
+        */
 
-    if (error) {
-      console.error('Gagal mengambil komentar:', error);
-      return;
-    }
 
-    const container = document.getElementById('daftarKomentar');
-    container.innerHTML = '';
+        const SUPABASE_URL =
+            "PROJECT_URL_KAMU";
 
-    data.forEach(item => {
-      const div = document.createElement('div');
-      div.className = 'komentar-item';
-      div.innerHTML = `<strong>${item.nama}</strong><p>${item.isi}</p>`;
-      container.appendChild(div);
-    });
-  }
 
-  // Kirim komentar baru ke Supabase
-  async function tambahKomentar() {
-    const namaInput = document.getElementById('nama');
-    const isiInput = document.getElementById('isiKomentar');
+        const SUPABASE_PUBLISHABLE_KEY =
+            "PUBLISHABLE_KEY_KAMU";
 
-    const nama = namaInput.value.trim();
-    const isi = isiInput.value.trim();
 
-    if (!nama || !isi) {
-      alert('Nama dan komentar tidak boleh kosong!');
-      return;
-    }
 
-    const { error } = await supabaseClient
-      .from('komentar')
-      .insert([{ nama: nama, isi: isi }]);
+        /* Membuat koneksi ke Supabase */
 
-    if (error) {
-      alert('Gagal mengirim komentar: ' + error.message);
-    } else {
-      alert('Komentar berhasil dikirim!');
-      namaInput.value = '';
-      isiInput.value = '';
-      muatKomentar();
-    }
-  }
+        const supabaseClient =
+            window.supabase.createClient(
+                SUPABASE_URL,
+                SUPABASE_PUBLISHABLE_KEY
+            );
 
-  muatKomentar();
-</script>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="script.js"></script>
+
+        /* ==================================================
+           2. MENAMPILKAN KOMENTAR
+        ================================================== */
+
+
+        async function tampilkanKomentar() {
+
+
+            const daftarKomentar =
+                document.getElementById(
+                    "daftarKomentar"
+                );
+
+
+            daftarKomentar.innerHTML =
+                "Memuat komentar...";
+
+
+            const { data, error } =
+                await supabaseClient
+
+                    .from("komentar")
+
+                    .select(
+                        "id, nama, pesan, created_at"
+                    )
+
+                    .order(
+                        "created_at",
+                        {
+                            ascending: false
+                        }
+                    );
+
+
+
+            /* Jika terjadi error */
+
+            if (error) {
+
+                console.error(
+                    "Error mengambil komentar:",
+                    error
+                );
+
+
+                daftarKomentar.innerHTML =
+                    "<p>Gagal mengambil komentar.</p>";
+
+
+                return;
+
+            }
+
+
+
+            /* Jika belum ada komentar */
+
+            if (!data || data.length === 0) {
+
+                daftarKomentar.innerHTML =
+                    "<p>Belum ada komentar.</p>";
+
+
+                return;
+
+            }
+
+
+
+            /* Kosongkan daftar */
+
+            daftarKomentar.innerHTML = "";
+
+
+
+            /* Menampilkan setiap komentar */
+
+            data.forEach(function (komentar) {
+
+
+                /* Membuat kotak komentar */
+
+                const kotakKomentar =
+                    document.createElement("div");
+
+
+                kotakKomentar.className =
+                    "komentar-item";
+
+
+
+                /* Nama */
+
+                const nama =
+                    document.createElement("strong");
+
+
+                nama.textContent =
+                    komentar.nama;
+
+
+
+                /* Isi komentar */
+
+                const pesan =
+                    document.createElement("p");
+
+
+                pesan.textContent =
+                    komentar.pesan;
+
+
+
+                /* Waktu */
+
+                const tanggal =
+                    document.createElement("small");
+
+
+                tanggal.textContent =
+                    new Date(
+                        komentar.created_at
+                    ).toLocaleString(
+                        "id-ID"
+                    );
+
+
+
+                /* Masukkan ke kotak */
+
+                kotakKomentar.appendChild(
+                    nama
+                );
+
+
+                kotakKomentar.appendChild(
+                    pesan
+                );
+
+
+                kotakKomentar.appendChild(
+                    tanggal
+                );
+
+
+
+                /* Masukkan ke daftar */
+
+                daftarKomentar.appendChild(
+                    kotakKomentar
+                );
+
+            });
+
+        }
+
+
+
+        /* ==================================================
+           3. MENGIRIM KOMENTAR
+        ================================================== */
+
+
+        document
+            .getElementById("formKomentar")
+            .addEventListener(
+                "submit",
+                async function (event) {
+
+
+                    /* Mencegah halaman refresh */
+
+                    event.preventDefault();
+
+
+
+                    /* Mengambil nama */
+
+                    const nama =
+                        document
+                            .getElementById("nama")
+                            .value
+                            .trim();
+
+
+
+                    /* Mengambil komentar */
+
+                    const pesan =
+                        document
+                            .getElementById(
+                                "isiKomentar"
+                            )
+                            .value
+                            .trim();
+
+
+
+                    /* Status */
+
+                    const status =
+                        document.getElementById(
+                            "statusKomentar"
+                        );
+
+
+
+                    /* Validasi */
+
+                    if (!nama || !pesan) {
+
+                        status.textContent =
+                            "Nama dan komentar harus diisi.";
+
+                        return;
+
+                    }
+
+
+
+                    /* Menampilkan proses */
+
+                    status.textContent =
+                        "Mengirim komentar...";
+
+
+
+                    /* Kirim ke Supabase */
+
+                    const { error } =
+                        await supabaseClient
+
+                            .from("komentar")
+
+                            .insert([
+                                {
+                                    nama: nama,
+                                    pesan: pesan
+                                }
+                            ]);
+
+
+
+                    /* Jika error */
+
+                    if (error) {
+
+                        console.error(
+                            "Error mengirim komentar:",
+                            error
+                        );
+
+
+                        status.textContent =
+                            "Komentar gagal dikirim.";
+
+
+                        return;
+
+                    }
+
+
+
+                    /* Berhasil */
+
+                    status.textContent =
+                        "Komentar berhasil dikirim!";
+
+
+
+                    /* Kosongkan form */
+
+                    document
+                        .getElementById(
+                            "formKomentar"
+                        )
+                        .reset();
+
+
+
+                    /* Tampilkan komentar terbaru */
+
+                    tampilkanKomentar();
+
+                }
+            );
+
+
+
+        /* ==================================================
+           4. LIKE
+        ================================================== */
+
+
+        let jumlahLike = 0;
+
+
+        function likeWebsite() {
+
+
+            jumlahLike++;
+
+
+            document
+                .getElementById(
+                    "jumlahLike"
+                )
+                .textContent =
+                jumlahLike;
+
+        }
+
+
+
+        /* ==================================================
+           5. DISLIKE
+        ================================================== */
+
+
+        let jumlahDislike = 0;
+
+
+        function dislikeWebsite() {
+
+
+            jumlahDislike++;
+
+
+            document
+                .getElementById(
+                    "jumlahDislike"
+                )
+                .textContent =
+                jumlahDislike;
+
+        }
+
+
+
+        /* ==================================================
+           6. JALANKAN SAAT WEBSITE DIBUKA
+        ================================================== */
+
+
+        tampilkanKomentar();
+
+
+    </script>
+
 
 </body>
+
 </html>
