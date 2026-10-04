@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Supabase -->
+    <!-- ================= SUPABASE ================= -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 
@@ -35,6 +35,7 @@
     <!-- ================= HERO ================= -->
     <section class="hero">
         <div class="hero-content">
+
             <h2>Selamat Datang di PalugadaKuYy</h2>
 
             <p>
@@ -45,12 +46,14 @@
             <a href="produk.html" class="btn">
                 Lihat Produk
             </a>
+
         </div>
     </section>
 
 
     <!-- ================= TENTANG SINGKAT ================= -->
     <section class="section">
+
         <h2>Tentang PalugadaKuYy</h2>
 
         <p>
@@ -58,16 +61,19 @@
             digital dalam satu platform. Kami berusaha memberikan informasi
             produk yang mudah dipahami dan mudah diakses.
         </p>
+
     </section>
 
 
     <!-- ================= PRODUK ================= -->
     <section class="section">
+
         <h2>Produk</h2>
 
         <div class="produk-container">
 
             <div class="produk-card">
+
                 <h3>Produk Digital</h3>
 
                 <p>
@@ -78,10 +84,12 @@
                 <a href="produk.html" class="btn">
                     Lihat Produk
                 </a>
+
             </div>
 
 
             <div class="produk-card">
+
                 <h3>E-Book</h3>
 
                 <p>
@@ -92,10 +100,12 @@
                 <a href="produk.html" class="btn">
                     Lihat E-Book
                 </a>
+
             </div>
 
 
             <div class="produk-card">
+
                 <h3>Layanan</h3>
 
                 <p>
@@ -106,14 +116,17 @@
                 <a href="kontak.html" class="btn">
                     Hubungi Kami
                 </a>
+
             </div>
 
         </div>
+
     </section>
 
 
     <!-- ================= GALERI ================= -->
     <section class="section">
+
         <h2>Galeri</h2>
 
         <p>
@@ -123,6 +136,7 @@
         <a href="galeri.html" class="btn">
             Buka Galeri
         </a>
+
     </section>
 
 
@@ -136,10 +150,12 @@
         </p>
 
 
-        <!-- FORM KOMENTAR -->
+        <!-- ================= FORM KOMENTAR ================= -->
         <form id="formKomentar">
 
+            <!-- NAMA -->
             <div class="form-group">
+
                 <label for="nama">
                     Nama
                 </label>
@@ -152,10 +168,13 @@
                     maxlength="50"
                     required
                 >
+
             </div>
 
 
+            <!-- KOMENTAR -->
             <div class="form-group">
+
                 <label for="isiKomentar">
                     Komentar
                 </label>
@@ -168,9 +187,11 @@
                     rows="5"
                     required
                 ></textarea>
+
             </div>
 
 
+            <!-- TOMBOL -->
             <button
                 type="submit"
                 id="tombolKomentar"
@@ -182,14 +203,14 @@
         </form>
 
 
-        <!-- STATUS -->
+        <!-- ================= STATUS ================= -->
         <p
             id="statusKomentar"
             class="status-komentar"
         ></p>
 
 
-        <!-- DAFTAR KOMENTAR -->
+        <!-- ================= DAFTAR KOMENTAR ================= -->
         <div
             id="daftarKomentar"
             class="daftar-komentar"
@@ -206,6 +227,7 @@
 
     <!-- ================= BANTUAN ================= -->
     <section class="section">
+
         <h2>Butuh Bantuan?</h2>
 
         <p>
@@ -216,11 +238,13 @@
         <a href="bantuan.html" class="btn">
             Buka Bantuan
         </a>
+
     </section>
 
 
     <!-- ================= KONTAK ================= -->
     <section class="section">
+
         <h2>Kontak</h2>
 
         <p>
@@ -230,6 +254,7 @@
         <a href="kontak.html" class="btn">
             Hubungi Kami
         </a>
+
     </section>
 
 
@@ -244,14 +269,23 @@
                 Berbagai kebutuhan dalam satu tempat.
             </p>
 
+
             <div class="footer-menu">
+
                 <a href="index.html">Beranda</a>
+
                 <a href="produk.html">Produk</a>
+
                 <a href="galeri.html">Galeri</a>
+
                 <a href="tentang.html">Tentang</a>
+
                 <a href="bantuan.html">Bantuan</a>
+
                 <a href="kontak.html">Kontak</a>
+
             </div>
+
 
             <p class="copyright">
                 © 2026 PalugadaKuYy. All Rights Reserved.
@@ -264,11 +298,15 @@
 
     <!-- ================= JAVASCRIPT ================= -->
 
-    <!-- File JavaScript utama -->
-    <script src="script.js"></script>
+    <!--
+        PENTING:
+        Supabase harus dimuat terlebih dahulu.
+        Setelah itu baru script.js.
+    -->
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
