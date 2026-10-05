@@ -8,7 +8,10 @@ const SUPABASE_PUBLISHABLE_KEY =
     "sb_publishable_rQsiAjAJ5Y78LFYd-dvcWg_4Bh5C-Sm";
 
 
-// Membuat koneksi ke Supabase
+// ==================================================
+// KONEKSI KE SUPABASE
+// ==================================================
+
 const supabaseClient = window.supabase.createClient(
     SUPABASE_URL,
     SUPABASE_PUBLISHABLE_KEY
@@ -32,18 +35,21 @@ async function tampilkanKomentar() {
     daftarKomentar.innerHTML =
         "<p>Memuat komentar...</p>";
 
-
     try {
 
-        const { data, error } = await supabaseClient
-            .from("komentar")
-            .select("id, nama, pesan, created_at")
-            .order("created_at", {
-                ascending: false
-            });
+        const { data, error } =
+            await supabaseClient
+                .from("komentar")
+                .select("id, nama, isi, tanggal")
+                .order("tanggal", {
+                    ascending: false
+                });
 
 
-        // Jika terjadi error
+        // ==========================================
+        // JIKA GAGAL MENGAMBIL DATA
+        // ==========================================
+
         if (error) {
 
             console.error(
@@ -58,7 +64,10 @@ async function tampilkanKomentar() {
         }
 
 
-        // Jika belum ada komentar
+        // ==========================================
+        // JIKA BELUM ADA KOMENTAR
+        // ==========================================
+
         if (!data || data.length === 0) {
 
             daftarKomentar.innerHTML =
@@ -68,11 +77,17 @@ async function tampilkanKomentar() {
         }
 
 
-        // Kosongkan daftar komentar
+        // ==========================================
+        // KOSONGKAN DAFTAR
+        // ==========================================
+
         daftarKomentar.innerHTML = "";
 
 
-        // Menampilkan setiap komentar
+        // ==========================================
+        // TAMPILKAN SEMUA KOMENTAR
+        // ==========================================
+
         data.forEach(function (komentar) {
 
             const div =
@@ -82,7 +97,10 @@ async function tampilkanKomentar() {
                 "komentar-item";
 
 
-            // Nama
+            // --------------------------------------
+            // NAMA
+            // --------------------------------------
+
             const nama =
                 document.createElement("h4");
 
@@ -90,40 +108,54 @@ async function tampilkanKomentar() {
                 komentar.nama;
 
 
-            // Isi komentar
-            const pesan =
+            // --------------------------------------
+            // ISI KOMENTAR
+            // --------------------------------------
+
+            const isi =
                 document.createElement("p");
 
-            pesan.textContent =
-                komentar.pesan;
+            isi.textContent =
+                komentar.isi;
 
 
-            // Tanggal
+            // --------------------------------------
+            // TANGGAL
+            // --------------------------------------
+
             const tanggal =
                 document.createElement("small");
 
-            if (komentar.created_at) {
+            if (komentar.tanggal) {
 
                 tanggal.textContent =
                     new Date(
-                        komentar.created_at
+                        komentar.tanggal
                     ).toLocaleString("id-ID");
 
             }
 
 
-            // Masukkan ke div komentar
+            // --------------------------------------
+            // MASUKKAN KE KOMENTAR
+            // --------------------------------------
+
             div.appendChild(nama);
-            div.appendChild(pesan);
+            div.appendChild(isi);
             div.appendChild(tanggal);
 
 
-            // Masukkan ke daftar komentar
+            // --------------------------------------
+            // MASUKKAN KE DAFTAR
+            // --------------------------------------
+
             daftarKomentar.appendChild(div);
 
         });
 
-    } catch (error) {
+    }
+
+    catch (error) {
 
         console.error(
             "Terjadi kesalahan:",
@@ -164,32 +196,38 @@ document.addEventListener(
             "submit",
             async function (event) {
 
-                // Mencegah halaman reload
+                // ----------------------------------
+                // MENCEGAH HALAMAN RELOAD
+                // ----------------------------------
+
                 event.preventDefault();
 
 
-                // Ambil nama
+                // ----------------------------------
+                // AMBIL INPUT
+                // ----------------------------------
+
                 const inputNama =
                     document.getElementById("nama");
 
-                // Ambil komentar
                 const inputKomentar =
                     document.getElementById("isiKomentar");
 
-                // Ambil status
                 const status =
                     document.getElementById(
                         "statusKomentar"
                     );
 
-                // Ambil tombol
                 const tombol =
                     document.getElementById(
                         "tombolKomentar"
                     );
 
 
-                // Pastikan elemen tersedia
+                // ----------------------------------
+                // CEK ELEMEN
+                // ----------------------------------
+
                 if (
                     !inputNama ||
                     !inputKomentar ||
@@ -204,16 +242,22 @@ document.addEventListener(
                 }
 
 
-                // Ambil nilai
+                // ----------------------------------
+                // AMBIL NILAI
+                // ----------------------------------
+
                 const nama =
                     inputNama.value.trim();
 
-                const pesan =
+                const isi =
                     inputKomentar.value.trim();
 
 
-                // Validasi
-                if (!nama || !pesan) {
+                // ----------------------------------
+                // VALIDASI
+                // ----------------------------------
+
+                if (!nama || !isi) {
 
                     status.textContent =
                         "Nama dan komentar harus diisi.";
@@ -222,12 +266,18 @@ document.addEventListener(
                 }
 
 
-                // Status mengirim
+                // ----------------------------------
+                // STATUS MENGIRIM
+                // ----------------------------------
+
                 status.textContent =
                     "Mengirim komentar...";
 
 
-                // Matikan tombol sementara
+                // ----------------------------------
+                // NONAKTIFKAN TOMBOL
+                // ----------------------------------
+
                 if (tombol) {
 
                     tombol.disabled = true;
@@ -240,9 +290,9 @@ document.addEventListener(
 
                 try {
 
-                    // ==========================================
+                    // ==================================
                     // SIMPAN KE SUPABASE
-                    // ==========================================
+                    // ==================================
 
                     const { data, error } =
                         await supabaseClient
@@ -250,15 +300,15 @@ document.addEventListener(
                             .insert([
                                 {
                                     nama: nama,
-                                    pesan: pesan
+                                    isi: isi
                                 }
                             ])
                             .select();
 
 
-                    // ==========================================
+                    // ==================================
                     // JIKA GAGAL
-                    // ==========================================
+                    // ==================================
 
                     if (error) {
 
@@ -270,6 +320,7 @@ document.addEventListener(
                         status.textContent =
                             "Komentar gagal disimpan: " +
                             error.message;
+
 
                         if (tombol) {
 
@@ -284,29 +335,37 @@ document.addEventListener(
                     }
 
 
-                    // ==========================================
+                    // ==================================
                     // JIKA BERHASIL
-                    // ==========================================
+                    // ==================================
 
                     console.log(
                         "Komentar berhasil disimpan:",
                         data
                     );
 
-
                     status.textContent =
                         "Komentar berhasil dikirim!";
 
 
-                    // Kosongkan form
+                    // ----------------------------------
+                    // KOSONGKAN FORM
+                    // ----------------------------------
+
                     formKomentar.reset();
 
 
-                    // Tampilkan komentar terbaru
+                    // ----------------------------------
+                    // TAMPILKAN KOMENTAR TERBARU
+                    // ----------------------------------
+
                     await tampilkanKomentar();
 
 
-                    // Aktifkan tombol
+                    // ----------------------------------
+                    // AKTIFKAN KEMBALI TOMBOL
+                    // ----------------------------------
+
                     if (tombol) {
 
                         tombol.disabled = false;
@@ -317,7 +376,10 @@ document.addEventListener(
                     }
 
 
-                    // Hilangkan status setelah 3 detik
+                    // ----------------------------------
+                    // HAPUS STATUS
+                    // ----------------------------------
+
                     setTimeout(
                         function () {
 
@@ -327,14 +389,14 @@ document.addEventListener(
                         3000
                     );
 
+                }
 
-                } catch (error) {
+                catch (error) {
 
                     console.error(
                         "Terjadi kesalahan:",
                         error
                     );
-
 
                     status.textContent =
                         "Terjadi kesalahan: " +
