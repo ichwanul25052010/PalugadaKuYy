@@ -137,19 +137,120 @@ async function tampilkanKomentar() {
 
 
             // --------------------------------------
-            // MASUKKAN KE KOMENTAR
-            // --------------------------------------
+// TOMBOL HAPUS
+// --------------------------------------
 
-            div.appendChild(nama);
-            div.appendChild(isi);
-            div.appendChild(tanggal);
+const tombolHapus =
+    document.createElement("button");
+
+tombolHapus.type = "button";
+tombolHapus.textContent = "Hapus";
+tombolHapus.className = "btn-hapus";
 
 
-            // --------------------------------------
-            // MASUKKAN KE DAFTAR
-            // --------------------------------------
+// --------------------------------------
+// KETIKA TOMBOL HAPUS DIKLIK
+// --------------------------------------
 
-            daftarKomentar.appendChild(div);
+tombolHapus.addEventListener(
+    "click",
+    async function () {
+
+        const yakin = confirm(
+            "Apakah kamu yakin ingin menghapus komentar ini?"
+        );
+
+        if (!yakin) {
+            return;
+        }
+
+
+        // Ubah tombol menjadi Menghapus...
+        tombolHapus.disabled = true;
+        tombolHapus.textContent = "Menghapus...";
+
+
+        try {
+
+            // ----------------------------------
+            // HAPUS BERDASARKAN ID
+            // ----------------------------------
+
+            const { error } =
+                await supabaseClient
+                    .from("komentar")
+                    .delete()
+                    .eq("id", komentar.id);
+
+
+            // ----------------------------------
+            // JIKA GAGAL
+            // ----------------------------------
+
+            if (error) {
+
+                console.error(
+                    "Gagal menghapus komentar:",
+                    error
+                );
+
+                alert(
+                    "Komentar gagal dihapus: " +
+                    error.message
+                );
+
+                tombolHapus.disabled = false;
+                tombolHapus.textContent = "Hapus";
+
+                return;
+            }
+
+
+            // ----------------------------------
+            // JIKA BERHASIL
+            // ----------------------------------
+
+            alert("Komentar berhasil dihapus.");
+
+            await tampilkanKomentar();
+
+        }
+
+        catch (error) {
+
+            console.error(
+                "Terjadi kesalahan:",
+                error
+            );
+
+            alert(
+                "Terjadi kesalahan saat menghapus komentar."
+            );
+
+            tombolHapus.disabled = false;
+            tombolHapus.textContent = "Hapus";
+
+        }
+
+    }
+);
+
+
+// --------------------------------------
+// MASUKKAN KE KOMENTAR
+// --------------------------------------
+
+div.appendChild(nama);
+div.appendChild(isi);
+div.appendChild(tanggal);
+div.appendChild(tombolHapus);
+
+
+// --------------------------------------
+// MASUKKAN KE DAFTAR
+// --------------------------------------
+
+daftarKomentar.appendChild(div);
 
         });
 
