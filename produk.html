@@ -62,11 +62,41 @@
     data.forEach(item => {
       const card = document.createElement('div');
       card.style.cssText = 'border: 1px solid #ddd; border-left: 5px solid #D4AF37; padding: 15px; margin: 15px auto; max-width: 500px; border-radius: 8px; text-align: left; background: #fafafa;';
-      card.innerHTML = `
-        <h3 style="margin-top: 0; color: #111;">${item.nama_produk}</h3>
-        <p><strong>Harga:</strong> Rp ${Number(item.harga).toLocaleString('id-ID')}</p>
-        <p>${item.deskripsi || ''}</p>
-      `;
+      
+card.innerHTML = `
+  <h3 style="margin-top:0;color:#111;">
+    ${item.nama_produk}
+  </h3>
+
+  <p><strong>Harga:</strong> Rp ${Number(item.harga).toLocaleString('id-ID')}</p>
+
+  <p>${item.deskripsi || ''}</p>
+
+  <button type="button" class="tombol-pratinjau">
+    Lihat Pratinjau
+  </button>
+
+  <div class="area-pratinjau" style="display:none;margin-top:15px;">
+    <iframe
+      src="Lembar-Kerja-Anak..pdf"
+      width="100%"
+      height="500"
+      style="border:1px solid #ddd;">
+    </iframe>
+
+    <p>
+      <a href="Lembar-Kerja-Anak..pdf" target="_blank">
+        Buka PDF di tab baru
+      </a>
+    </p>
+  </div>
+`;
+
+card.querySelector('.tombol-pratinjau').addEventListener('click', function () {
+  const area = card.querySelector('.area-pratinjau');
+  area.style.display = area.style.display === 'none' ? 'block' : 'none';
+});
+
       container.appendChild(card);
     });
   }
